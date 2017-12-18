@@ -1,0 +1,95 @@
+
+@font-face {
+  font-family: 'Roboto-Black';
+  src: url('../fonts/Roboto/Roboto-Black.ttf') format('truetype');
+}
+%rb-black {
+  font-family: 'Roboto-Black', sans-serif;
+}
+
+@font-face {
+  font-family: 'Roboto-BlackItalic';
+  src: url('../fonts/Roboto/Roboto-BlackItalic.ttf') format('truetype');
+}
+%rb-black-italic {font-family: 'Roboto-BlackItalic', sans-serif;}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('../fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+}
+%rb-bold {font-family: 'Roboto-Bold', sans-serif;}
+
+@font-face {
+  font-family: 'Roboto-BoldItalic';
+  src: url('../fonts/Roboto/Roboto-BoldItalic.ttf') format('truetype');
+}
+%rb-bold-italic {font-family: 'Roboto-BoldItalic', sans-serif;}
+
+@font-face {
+  font-family: 'Roboto-Italic';
+  src: url('../fonts/Roboto/Roboto-Italic.ttf') format('truetype');
+}
+%rb-italic {font-family: 'Roboto-Italic', sans-serif;}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('../fonts/Roboto/Roboto-Light.ttf') format('truetype');
+}
+%rb-light {font-family: 'Roboto-Light', sans-serif;}
+
+@font-face {
+  font-family: 'Roboto-LightItalic';
+  src: url('../fonts/Roboto/Roboto-LightItalic.ttf') format('truetype');
+}
+%rb-light-italic {font-family: 'Roboto-LightItalic', sans-serif;}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('../fonts/Roboto/Roboto-Medium.ttf') format('truetype');
+}
+%rb-medium {font-family: 'Roboto-Medium, sans-serif';}
+
+@font-face {
+  font-family: 'Roboto-MediumItalic';
+  src: url('../fonts/Roboto/Roboto-MediumItalic.ttf') format('truetype');
+}
+%rb-medium-italic {font-family: 'Roboto-MediumItalic', sans-serif;}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+%rb-regular {font-family: 'Roboto-Regular', sans-serif;}
+
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url('../fonts/Roboto/Roboto-Thin.ttf') format('truetype');
+}
+%rb-thin {font-family: 'Roboto-Thin', sans-serif;}
+
+@font-face {
+  font-family: 'Roboto-ThinItalic';
+  src: url('../fonts/Roboto/Roboto-ThinItalic.ttf') format('truetype');
+}
+%rb-thin-italic {font-family: 'Roboto-ThinItalic', sans-serif;}
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('../fonts/Roboto/RobotoCondensed-Regular.ttf') format('truetype');
+}
+%rb-consender {font-family: 'Roboto Condensed', sans-serif;}
+@font-face {
+  font-family: 'Canela Web';
+  src: url('../fonts/Canela/Canela-Thin-Web.eot');
+  src: url('../fonts/Canela/Canela-Thin-Web.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Canela/Canela-Thin-Web.woff2') format('woff2'),
+  url('../fonts/Canela/Canela-Thin-Web.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+}
+%canela-font {
+  font-family: 'Canela Web', sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+}

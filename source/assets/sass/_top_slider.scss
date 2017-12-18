@@ -1,0 +1,87 @@
+.pogoSlider {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 0;
+  &-slide {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    opacity: 0;
+    overflow: hidden;
+    -webkit-perspective: 1300px;
+    perspective: 1300px;
+    position: absolute;
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-top: 5%;
+    &:after {
+      background: #000 url("../images/pattarn.png") repeat scroll 0 0;
+      content: "";
+      height: 100%;
+      left: 0;
+      opacity: 0.6;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+  &-nav {
+    z-index: 1;
+    &-btn {
+      background: 0;
+      border: 2px solid $colorWhite;
+      width: 16px;
+      height: 16px;
+      box-sizing: border-box;
+      &--selected {
+        background: $colorWhite;
+      }
+    }
+  }
+}
+.slider-area {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+body, html {
+  height:100%;
+}
+h2.pogoSlider-slide-element {
+  font-family: "Times New Roman";
+  font-size: 60px;
+  color: $colorWhite;
+  margin: 0 10px;
+}
+h1.pogoSlider-slide-element {
+  font-family: 'Great Vibes', cursive;
+  font-weight: normal;
+  font-size: 40px;
+  color: $colorWhite;
+}
+h3.pogoSlider-slide-element a{
+  font-family: "Times New Roman";
+  font-size: 18px;
+  font-weight: normal;
+  padding: 10px 0;
+  text-align: center;
+  border: 1px solid $colorWhite;
+  color: $colorWhite !important;
+  display: block;
+  width: 273px;
+}

@@ -1,0 +1,35 @@
+.header {
+    &-top {
+        //padding-top: calc-percent(874,960);
+        background: url("../images/item_opacity_03.png") no-repeat 60% center;
+        background-size: contain;
+        background-attachment: fixed;
+        height: 874px;;
+        &-cover {
+            background: url("../images/bg_color_main.jpg") no-repeat left top;
+            background-size: cover;
+        }
+        .menu {
+            margin-top: 5%;
+            margin-left: 0;
+            display: block;
+            width: calc-percent(400,$innerwidth);
+            li {
+                text-align: center;
+                img {
+                    max-width: 90%;
+                }
+            }
+            a {
+                line-height: (35/18);
+                color: $colorWhite;
+                font-size: 18px;
+            }
+        }
+        .inner {
+            //@extend %pos-relative;
+            border: 1px solid greenyellow;
+        }
+    }
+
+}

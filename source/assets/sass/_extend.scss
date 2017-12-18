@@ -1,0 +1,121 @@
+%tb {
+  &-flex {
+    display: flex;
+    &-center {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &-table {
+    display: table;
+    width: 100%;
+    &-cell {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+%bold { font-weight: bold;}
+%pos {
+  &-relative {
+    position: relative;
+  }
+  &-absolute {
+    position: absolute;
+  }
+}
+%br {
+  &-10 {
+    border: 10px solid $colorRed;
+    &-top {
+      border-top: 10px solid $colorRed;
+    }
+    &-bottom {
+      border-bottom: 10px solid $colorRed;
+    }
+    &-left {
+      border-left: 10px solid $colorRed;
+    }
+    &-right {
+      border-right: 10px solid $colorRed;
+    }
+  }
+    &-30 {
+        &-top {
+            border-top: 30px solid $colorRed;
+        }
+        &-bottom {
+            border-bottom: 30px solid $colorRed;
+        }
+    }
+
+}
+%txt {
+    &-center {
+        text-align: center;
+    }
+    &-right {
+        text-align: right;
+    }
+}
+%ttl {
+    font-size: 33px;
+    text-transform: uppercase;
+    line-height: (53/33);
+    @extend %txt-center;
+}
+%br20 {
+  border-radius: 20px;
+}
+%br {
+  &-img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  &5 {
+    border-radius: 5px;
+  }
+  &8 {
+    border-radius: 8px;
+  }
+}
+
+%over2line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-height: 1.1em;
+  max-height:2.2em ;
+  min-height: 2.2em;
+  -webkit-box-orient: vertical;
+}
+%over6line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-height: 1.6em;
+  max-height:9.6em ;
+  min-height: 9.6em;
+  -webkit-box-orient: vertical;
+}
+%over2lineautoheight {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  max-height: 3.36em;
+  line-height: 1.68em; // check psd/(font-size/1.2)
+  -webkit-box-orient: vertical;
+}
+%arrow-top {
+  bottom: 100%;
+  border: solid transparent;
+  height: 0;
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  border-style: solid;
+  width: 0;
+}
