@@ -94,5 +94,8 @@ $(document).ready(function () {
             $('.search-form-js').slideDown()
         }
     })
-
+    //meanmenu
+    $('.header-menu-content').meanmenu( {
+        meanScreenWidth: "768"
+    });
 })
