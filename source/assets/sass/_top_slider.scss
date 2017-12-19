@@ -85,3 +85,14 @@ h3.pogoSlider-slide-element a{
   display: block;
   width: 273px;
 }
+.slide {
+  &1 {
+    background:url(../images/index/banner4.jpg) no-repeat scroll 0 0 / cover;
+  }
+  &2 {
+    background:url(../images/index/brn2.jpg) no-repeat scroll 0 0 / cover;
+  }
+  &3 {
+    background:url(../images/index/brn.jpg) no-repeat scroll 0 0 / cover;
+  }
+}
