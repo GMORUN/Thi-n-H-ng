@@ -1,9 +1,13 @@
 //hiennt
 
 //myht
-.page {
-  &-banner {
-    width: 100%;
-    padding: 70px 0 35px;
+.bread-crumb {
+   a {
+    color: $colorWhite;
+    font-size: 16px;
+  }
+  li {
+    display: inline-block;
+    color: $colorYellow;
   }
 }

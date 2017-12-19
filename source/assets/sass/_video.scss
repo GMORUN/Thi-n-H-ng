@@ -1,0 +1,23 @@
+.video {
+  &-banner {
+    @extend %page-banner;
+    background-image: url("../images/video/bnr_video.jpg");
+  }
+  &-group {
+    &-item {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      margin-top: 38px;
+    }
+  }
+  &-item {
+    width: calc-percent(371,1170);
+    margin: auto calc-percent(28,1170) calc-percent(28,1170) 0;
+    background: $colorLightGrey;
+    color: $colorRed;
+    &:nth-of-type(3n+3) {
+      margin-right: 0;
+    }
+  }
+}

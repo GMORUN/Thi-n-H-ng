@@ -122,3 +122,9 @@
 //Hiennt
 
 //Myht
+%page-banner {
+  width: 100%;
+  padding: get-vw(1920,70) 0 get-vw(1920,40);
+  background-size: 100% auto;
+  margin-bottom: 50px;
+}
