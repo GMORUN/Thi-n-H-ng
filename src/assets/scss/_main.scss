@@ -168,6 +168,10 @@
                 @extend %br5;
                 @extend %txt-center;
                 @extend %pos-relative;
+                @include responsive-font(get-vw-pc(20px), 13px, 20px);
+                @include respond-to($vertabwidth) {
+                    @include responsive-font(get-vw-sp(20px), 12px,20px);
+                }
                 &:after {
                     bottom: 99%;
                     left: 50%;

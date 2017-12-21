@@ -1,6 +1,8 @@
-.idea
 node_modules
-product
-package-lock.json
-yarn.lock
-package.json
+dist/
+.tmp
+app.yaml
+/.idea/
+/.idea/*
+/.idea/workspace.xml
+/src/assets/styles/
