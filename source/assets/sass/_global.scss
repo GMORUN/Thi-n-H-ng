@@ -4,14 +4,9 @@ body {
     font-size: 15px;
     line-height: (25/15);
     @extend %rb-regular;
-    @include respond-to($horitabwidth) {
-        font-size: get-vw($horitabwidth,15);
-    }
+    @include responsive-font(get-vw-pc(15px), 13px, 15px);
     @include respond-to($vertabwidth) {
-        font-size: get-vw($vertabwidth,15);
-    }
-    @include respond-to($spwidth) {
-        font-size: get-item(15);
+        @include responsive-font(get-vw-sp(15px), 13px, 15px);
     }
 }
 html {

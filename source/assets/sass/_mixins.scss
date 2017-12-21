@@ -39,7 +39,7 @@
   font-size: $responsive;
 }
 
-@function get-vw($target) {
+@function get-vw-pc($target) {
   $vw-context: (1416 * 0.01) * 1px;
   @return ($target / $vw-context) * 1vw;
 }
