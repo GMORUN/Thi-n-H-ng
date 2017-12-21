@@ -1,0 +1,52 @@
+//edge
+@supports (-ms-ime-align:auto)  {
+  /*only for edge*/
+  .list {
+    &-item {
+      li {
+        margin-bottom: get-vw-hack(730,15);
+        @include respond-to($tabWidth) {
+          margin-bottom: get-vw-hack($tabWidth,30);
+        }
+      }
+    }
+  }
+  .side {
+    .campaign {
+      &-item {
+        li {
+          margin-bottom: get-vw-hack(730,11);
+        }
+      }
+    }
+  }
+  //.campaign-item li {
+  //  margin-bottom: get-vw-hack(730,11);
+  //}
+}
+//firefox
+@-moz-document url-prefix() {
+  .list {
+    &-item {
+      li {
+        margin-bottom: get-vw-hack(730,15);
+        @include respond-to($tabWidth) {
+          margin-bottom: get-vw-hack($tabWidth,30);
+        }
+      }
+    }
+  }
+  .side {
+    .campaign {
+      &-item {
+        li {
+          margin-bottom: get-vw-hack(730,11);
+        }
+      }
+    }
+  }
+  //.campaign-item li {
+  //  padding-top: get-vw-hack(670,118);
+  //  margin-bottom: get-vw-hack(730,11);
+  //}
+}
