@@ -65,6 +65,10 @@ select {
     margin: 0 auto;
     box-sizing: border-box;
     max-width: $innerwidth*1px;
+    width: 95%;
+    @include respond-to($vertabwidth) {
+        width: calc-percent(736,768);
+    }
     //border: 1px solid green;
 }
 //.inner,

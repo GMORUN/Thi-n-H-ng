@@ -5,6 +5,12 @@
         border-bottom: 1px solid #e5e5e5;
         @extend %rb-consender;
         @extend %ttl;
+        @include respond-to($vertabwidth) {
+            font-size: get-vw($vertabwidth,33);
+        }
+        @include respond-to($spwidth) {
+            font-size: get-item(33);
+        }
         span {
             margin: 0 auto -4px;
             display: block;

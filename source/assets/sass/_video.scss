@@ -1,23 +1,69 @@
 .video {
-  &-banner {
-    @extend %page-banner;
-    background-image: url("../images/video/bnr_video.jpg");
-  }
   &-group {
     &-item {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
       margin-top: 38px;
+      @include respond-to($vertabwidth) {
+        margin-top: calc-percent(30,768);
+      }
     }
   }
   &-item {
-    width: calc-percent(371,1170);
-    margin: auto calc-percent(28,1170) calc-percent(28,1170) 0;
+    width: calc-percent(371,$innerwidth);
+    margin: auto calc-percent(28,$innerwidth) get-vw($innerwidth,25) 0;
     background: $colorLightGrey;
-    color: $colorRed;
+    color: $colorDarkGrey;
+    font-size: 16px;
+    @include respond-to($vertabwidth){
+      width: calc-percent(360,736);
+      margin: auto calc-percent(16,736) get-vw(736,16) auto !important;
+      font-size: get-vw($vertabwidth,20);
+      &:nth-of-type(2n) {
+        margin-right: 0!important;
+      }
+    }
+    @include respond-to(430){
+      width: calc-percent(650,736);
+      margin: 0 auto 10px !important;
+      font-size: get-item(20);
+      &:nth-of-type(2n) {
+        margin-right: auto!important;
+      }
+    }
     &:nth-of-type(3n+3) {
       margin-right: 0;
     }
+    &-title {
+      color: $colorRed;
+      font-size: 20px;
+      margin-bottom: 5px;
+      @include respond-to($vertabwidth){
+        font-size: get-vw($vertabwidth,20);
+      }
+      @include respond-to($spwidth) {
+        font-size: get-item(20);
+      }
+    }
+    &-text {
+      padding: calc-percent(14,371) calc-percent(18,371);
+      i:before {
+        margin-right: 5px;
+      }
+    }
+    a {
+      color: $colorDarkGrey;
+    }
   }
+}
+.lity-iframe .lity-container, .lity-youtube .lity-container, .lity-vimeo .lity-container, .lity-facebookvideo .lity-container, .lity-googlemaps .lity-container {
+  width: 80%;
+  max-width: 750px;
+  @include respond-to($spwidth) {
+    width: 100%;
+  }
+}
+.lity {
+  background-color: rgba(0, 0, 0, 0.8);
 }

@@ -2,12 +2,67 @@
 
 //myht
 .bread-crumb {
+  margin-top: -(calc-percent(95,1920));
+  @include respond-to($vertabwidth){
+    margin-top: -(calc-percent(70,$vertabwidth));
+  }
+  @include respond-to($spwidth){
+    margin-top: -(calc-percent(75,$vertabwidth));
+  }
    a {
     color: $colorWhite;
     font-size: 16px;
+     @include respond-to($vertabwidth){
+      font-size: get-vw($vertabwidth,16);
+     }
+     @include respond-to($spwidth){
+       font-size: get-item(16);
+     }
   }
   li {
     display: inline-block;
     color: $colorYellow;
+    font-size: 16px;
+    @include respond-to($vertabwidth){
+      font-size: get-vw($vertabwidth,16);
+    }
+    @include respond-to($spwidth){
+      font-size: get-item(16);
+    }
+  }
+}
+.show {
+  &-pc {
+    @include respond-to($vertabwidth){
+      display: none;
+    }
+  }
+  &-sp {
+    display: none;
+    @include respond-to($vertabwidth){
+      display: block;
+    }
+  }
+}
+.banner-page {
+  .main-ttl {
+    padding-top: 70px;
+    @include respond-to($vertabwidth){
+      padding-top: calc-percent(70,$vertabwidth);
+
+    }
+  }
+}
+.page {
+  &-banner {
+    @extend %page-banner;
+    background-image: url("../images/video/bnr_video.jpg");
+    @include respond-to($vertabwidth) {
+      background-image: url("../images/video/bnr_video_sp.jpg");
+      padding-top: calc-percent(129,768);
+    }
+    @include respond-to($spwidth) {
+      background-image: url("../images/video/bnr_video_sp.jpg");
+    }
   }
 }

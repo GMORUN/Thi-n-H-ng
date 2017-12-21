@@ -124,7 +124,6 @@
 //Myht
 %page-banner {
   width: 100%;
-  padding: get-vw(1920,70) 0 get-vw(1920,40);
+  padding-top: calc-percent(169,1920);
   background-size: 100% auto;
-  margin-bottom: 50px;
 }

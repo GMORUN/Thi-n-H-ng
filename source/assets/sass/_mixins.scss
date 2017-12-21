@@ -12,5 +12,5 @@
   @return ($size / $vw-context) * 1vw;
 }
 @function get-item($size) {
-  @return ($size / 2) * 1vw;
+  @return ($size / 2) * 1.5px;
 }
