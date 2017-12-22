@@ -1,0 +1,68 @@
+.video {
+  &-group {
+    &-item {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      margin-top: 38px;
+      @include respond-to($vertabwidth) {
+        margin-top: calc-percent(30,768);
+      }
+    }
+  }
+  &-item {
+    width: calc-percent(371,$innerwidth);
+    margin: auto calc-percent(28,$innerwidth) get-vw($innerwidth,25) 0;
+    background: $colorLightGrey;
+    color: $colorDarkGrey;
+    @include responsive-font(get-vw-pc(16px), 13px, 16px);
+    @include respond-to(768){
+      width: calc-percent(360,736);
+      margin: auto calc-percent(16,736) get-vw(736,16) auto !important;
+      @include responsive-font(get-vw-sp(20px), 13px, 20px);
+      &:nth-of-type(2n) {
+        margin-right: 0!important;
+      }
+    }
+    @include respond-to(430){
+      width: calc-percent(650,736);
+      margin: 0 auto 10px !important;
+      &:nth-of-type(2n) {
+        margin-right: auto!important;
+      }
+    }
+    &:nth-of-type(3n+3) {
+      margin-right: 0;
+    }
+    &-title {
+      color: $colorRed;
+      @include responsive-font(get-vw-pc(20px), 15px, 20px);
+      margin-bottom: 5px;
+      @include respond-to($vertabwidth){
+        @include responsive-font(get-vw-sp(20px), 15px, 20px);
+      }
+      @include respond-to(430){
+        font-size: 20px !important;
+      }
+    }
+    &-text {
+      padding: calc-percent(14,371) calc-percent(18,371);
+      i:before {
+        margin-right: 5px;
+      }
+    }
+    a {
+      color: $colorDarkGrey;
+    }
+  }
+}
+.lity-iframe .lity-container, .lity-youtube .lity-container, .lity-vimeo .lity-container, .lity-facebookvideo .lity-container, .lity-googlemaps .lity-container {
+  width: 80%;
+  max-width: 750px;
+  @include respond-to($spwidth) {
+    width: 100%;
+  }
+}
+.lity {
+  background-color: rgba(0, 0, 0, 0.8);
+}

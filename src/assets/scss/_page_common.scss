@@ -22,12 +22,9 @@
   li {
     display: inline-block;
     color: $colorYellow;
-    font-size: 16px;
+    @include responsive-font(get-vw-pc(16px), 13px, 16px);
     @include respond-to($vertabwidth){
-      font-size: get-vw($vertabwidth,16);
-    }
-    @include respond-to($spwidth){
-      font-size: get-item(16);
+      @include responsive-font(get-vw-sp(16px), 13px, 16px);
     }
   }
 }
@@ -64,5 +61,13 @@
     @include respond-to($spwidth) {
       background-image: url("../images/video/bnr_video_sp.jpg");
     }
+  }
+}
+.title-red {
+  @extend %rb-consender;
+  @include responsive-font(get-vw-pc(30px), 20px, 30px);
+  color: #da251c;
+  @include respond-to(769){
+    @include responsive-font(get-vw-sp(30px), 15px, 30px);
   }
 }
