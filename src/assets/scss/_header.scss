@@ -49,15 +49,15 @@
         @extend %tb-flex;
     }
     .logo {
-        margin-top: -55px;
-        width: calc-percent(80,$innerwidth);
+        margin-top: -50px;
+        width: calc-percent(120,$innerwidth);
         margin-right: calc-percent(20,$innerwidth);
         z-index: 999;
     }
 
     &-menu {
         margin: 18px auto;
-        width: calc-percent($innerwidth - 80 -20,$innerwidth);
+        width: calc-percent($innerwidth - 120 -20,$innerwidth);
         flex-wrap: wrap;
         flex-direction: column;
         align-items: flex-end;
@@ -144,10 +144,12 @@
     position: relative;
     @extend %tb-flex;
     li {
-      border: 1px solid red;
+      background: green;
         margin: 0 calc-percent(15,$innerwidth - 80 -20);
+        flex: 2;
+        @extend %tb-flex-center;
+        @extend %tb-flex;
         @extend %br20;
-        line-height: 2;
         position: relative;
         div {
             display: none;
@@ -163,6 +165,7 @@
             }
         }
         &:last-child {
+            flex: 1;
             &:hover {
                 background-color: transparent;
             }
@@ -178,17 +181,18 @@
         }
     }
     a {
+        padding: 3px 0;
         display: block;
         color: $colorWhite;
         text-align: center;
         font-weight: bold;
-        @include responsive-font(get-vw-pc(16px), 13px, 16px);
+        @include responsive-font(get-vw-pc(16px), 11px, 16px);
         @include respond-to($vertabwidth) {
             @include responsive-font(get-vw-sp(16px), 12px,16px);
         }
         span {
           display: block;
-          padding: 5px calc-percent(20,$innerwidth - 80 -20) ;
+
         }
     }
 }

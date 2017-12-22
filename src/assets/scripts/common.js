@@ -98,4 +98,6 @@ $(document).ready(function () {
     $('.header-menu-content').meanmenu( {
         meanScreenWidth: "768"
     });
+    // slider product list sp
+  
 })
