@@ -57,6 +57,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include respond-to($vertabwidth) {
+      background: rgba(218, 37, 28, 0.3);
+    }
     &:before {
       content: url(../../assets/images/icn_arr_prev.png);
       width: 10px;
@@ -79,6 +82,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include respond-to($vertabwidth) {
+      background: rgba(218, 37, 28, 0.3);
+    }
     &:before {
       content: url(../../assets/images/icn_arr_next.png);
       width: 10px;
@@ -103,6 +109,9 @@
       background: #949494 !important;
       &:hover, &.active {
         background: #fff !important;
+        @include respond-to($vertabwidth) {
+          background: #da251c !important;
+        }
       }
     }
   }

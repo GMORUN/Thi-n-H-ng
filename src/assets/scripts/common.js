@@ -99,5 +99,37 @@ $(document).ready(function () {
         meanScreenWidth: "768"
     });
     // slider product list sp
+    // $('.bxslider').bxSlider({
+    //   minSlides: 2,
+    //   maxSlides: 2,
+    //   slideWidth: 360,
+    //   slideMargin: 10
+    // });
+  
+  function makeSlider () {
+    var slider = null;
+    var option = {
+      minSlides: 2,
+      maxSlides: 2,
+      moveSlides: 2,
+      slideMargin: 10,
+      slideWidth: 360,
+      // pager: false
+    }
+    if($(window).width() <= 768) {
+      if(slider=== null) {
+        slider = $('.product-list-js').bxSlider(option);
+      } else {
+        slider.reloadSlider();
+      }
+    } else {
+      slider.destroySlider();
+      slider = null;
+    }
+  }
+  makeSlider();
+  $(window).resize(function(){
+    makeSlider();
+  })
   
 })
