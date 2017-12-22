@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
 body {
     color: $colorMainTxt;
     background: $colorWhite;
     font-size: 15px;
     line-height: (25/15);
-    @extend %rb-regular;
+    font-family: 'Roboto', sans-serif;
     @include responsive-font(get-vw-pc(15px), 13px, 15px);
     @include respond-to($vertabwidth) {
         @include responsive-font(get-vw-sp(15px), 13px, 15px);
