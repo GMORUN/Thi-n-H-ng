@@ -1,0 +1,49 @@
+.mission {
+  @extend %tb-flex;
+  @extend %tb-flex-center;
+  flex-wrap: wrap;
+  direction: row;
+  background: url("../images/vision/bg_vission.jpg") no-repeat center bottom;
+  background-size: 100% auto;
+  padding: 50px 0 60px;
+  @include respond-to($vertabwidth) {
+    padding-top: 3%;
+    padding-bottom: calc-percent(50, 730);
+  }
+  &-text {
+    width: calc-percent(506, $innerwidth);
+    @include responsive-font(get-vw-pc(18px), 14px, 18px);
+    @include respond-to($vertabwidth) {
+      width: 100%;
+      @include responsive-font(get-vw-sp(18px), 15px, 18px);
+    }
+
+    .title-red {
+      margin-bottom: 20px;
+      @include respond-to($vertabwidth) {
+        text-align: center;
+      }
+    }
+  }
+  img {
+    max-width: 323px;
+    @include respond-to($vertabwidth) {
+      width: calc-percent(323,730);
+    }
+  }
+}
+.vision {
+  @extend %tb-flex;
+  @extend %tb-flex-center;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  @include respond-to($vertabwidth) {
+    margin-top: 5%;
+  }
+  img {
+    max-width: 299px;
+    @include respond-to($vertabwidth) {
+      width: calc-percent(299,730);
+    }
+  }
+}

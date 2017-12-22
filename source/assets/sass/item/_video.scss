@@ -15,11 +15,11 @@
     margin: auto calc-percent(28,$innerwidth) get-vw($innerwidth,25) 0;
     background: $colorLightGrey;
     color: $colorDarkGrey;
-    font-size: 16px;
-    @include respond-to($vertabwidth){
+    @include responsive-font(get-vw-pc(16px), 13px, 16px);
+    @include respond-to(768){
       width: calc-percent(360,736);
       margin: auto calc-percent(16,736) get-vw(736,16) auto !important;
-      font-size: get-vw($vertabwidth,20);
+      @include responsive-font(get-vw-sp(20px), 13px, 20px);
       &:nth-of-type(2n) {
         margin-right: 0!important;
       }
@@ -27,7 +27,6 @@
     @include respond-to(430){
       width: calc-percent(650,736);
       margin: 0 auto 10px !important;
-      font-size: get-item(20);
       &:nth-of-type(2n) {
         margin-right: auto!important;
       }
@@ -37,13 +36,13 @@
     }
     &-title {
       color: $colorRed;
-      font-size: 20px;
+      @include responsive-font(get-vw-pc(20px), 15px, 20px);
       margin-bottom: 5px;
       @include respond-to($vertabwidth){
-        font-size: get-vw($vertabwidth,20);
+        @include responsive-font(get-vw-sp(20px), 15px, 20px);
       }
-      @include respond-to($spwidth) {
-        font-size: get-item(20);
+      @include respond-to(430){
+        font-size: 20px !important;
       }
     }
     &-text {
