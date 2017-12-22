@@ -99,6 +99,10 @@
   max-height:15.6em ;
   min-height: 15.6em;
   -webkit-box-orient: vertical;
+  @include respond-to($vertabwidth) {
+    max-height:6.4em ;
+    min-height: 6.4em;
+  }
 }
 %over2lineautoheight {
   overflow: hidden;

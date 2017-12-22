@@ -232,6 +232,12 @@
             height: 85%;
             background-color: $colorWhite;
             @extend %pos-absolute;
+            @include respond-to($vertabwidth) {
+              position: static;
+              width: 100%;
+              height: auto;
+              padding-bottom: 70px;
+            }
             .ttl {
                 font-size: 25px;
                 color: $colorBlack;
