@@ -11,12 +11,9 @@
   }
    a {
     color: $colorWhite;
-    font-size: 16px;
+     @include responsive-font(get-vw-pc(16px), 13px, 16px);
      @include respond-to($vertabwidth){
-      font-size: get-vw($vertabwidth,16);
-     }
-     @include respond-to($spwidth){
-       font-size: get-item(16);
+       @include responsive-font(get-vw-sp(16px), 13px, 16px);
      }
   }
   li {
@@ -67,7 +64,34 @@
   @extend %rb-consender;
   @include responsive-font(get-vw-pc(30px), 20px, 30px);
   color: #da251c;
-  @include respond-to(769){
+  @include respond-to($vertabwidth){
     @include responsive-font(get-vw-sp(30px), 15px, 30px);
+  }
+}
+.manager {
+  &-name {
+    padding: 5px 0px;
+    width: 100%;
+    text-align: center;
+    background: $colorRed;
+    color: $colorWhite;
+    border-radius: 8px;
+    @include responsive-font(get-vw-pc(20px), 15px, 20px);
+    @include respond-to($vertabwidth){
+      @include responsive-font(get-vw-sp(20px), 15px, 20px);
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+  &-position {
+    margin-top: 10px;
+    text-align: center;
+    color: #494949;
+    font-weight: bold;
+    @include responsive-font(get-vw-pc(17px), 13px, 17px);
+    @include respond-to($vertabwidth){
+      @include responsive-font(get-vw-sp(17px), 13px, 17px);
+    }
   }
 }

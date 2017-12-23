@@ -1,0 +1,37 @@
+.group {
+  &-letter {
+    @extend %tb-flex;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    &-left {
+      margin-right: calc-percent(82,1170);
+      width: calc-percent(232,1170);
+      @include respond-to($vertabwidth) {
+        margin: 0 auto;
+        width: calc-percent(230,736);
+        min-width: 150px;
+      }
+      img {
+        margin-bottom: 30px;
+      }
+    }
+    &-right {
+      width: calc-percent(855,1170);
+      @include respond-to($vertabwidth) {
+        width: 100%;
+      }
+      p {
+        text-align: justify;
+        margin-bottom: 15px;
+        &:first-child {
+          font-weight: bold;
+        }
+      }
+      .instate {
+        margin-top:  30px;
+      }
+    }
+  }
+}
+
