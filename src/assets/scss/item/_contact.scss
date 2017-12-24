@@ -1,0 +1,52 @@
+.contact {
+  &-map {
+    width: 100%;
+    margin: 20px auto;
+    height: get-vw(1170,334);
+  }
+  &-address {
+    position: relative;
+    @extend %tb-flex;
+    &-left, &-right {
+      width: 50%;
+    }
+    &-left {
+      background: url("../images/contact/bg_top_red.png") no-repeat top left;
+      padding-top: 50px;
+      span {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+    .contact-title {
+      margin-bottom: 20px;
+    }
+    .fa {
+      margin-right: 15px;
+      color: #9b9b9b;
+      margin-bottom: 15px;
+      @include responsive-font(get-vw-pc(16px), 12px, 16px);
+      @include respond-to($vertabwidth){
+        @include responsive-font(get-vw-sp(16px), 12px, 16px);
+      }
+    }
+    &-right {
+      background: url("../images/contact/bg_top_grey.png") no-repeat top left;
+      padding-top: 50px;
+      padding-left: 15px;
+    }
+  }
+  &-title {
+    @include responsive-font(get-vw-pc(16px), 14px, 30px);
+    color: $colorRed;
+    font-weight: bold;
+    @include respond-to($vertabwidth){
+      @include responsive-font(get-vw-sp(16px), 14px, 16px);
+    }
+  }
+  &-icn {
+    position: absolute;
+    top: 3px;
+    left: 47%;
+  }
+}
