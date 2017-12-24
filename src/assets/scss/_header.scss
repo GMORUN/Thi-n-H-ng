@@ -188,7 +188,7 @@
         font-weight: bold;
         @include responsive-font(get-vw-pc(16px), 11px, 16px);
         @include respond-to($vertabwidth) {
-            @include responsive-font(get-vw-sp(16px), 12px,16px);
+            @include responsive-font(get-vw-sp(16px),$min-font-sp,16px);
         }
         span {
           display: block;

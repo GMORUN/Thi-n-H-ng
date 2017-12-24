@@ -144,8 +144,14 @@
             border: 1px solid green;
             @extend %tb-flex;
             @extend %br8;
+            @include respond-to($vertabwidth) {
+              margin: 0 8px;
+            }
             &:nth-of-type(4n+4) {
                 margin-right: 0;
+                @include respond-to($vertabwidth) {
+                  margin: 0 8px;
+                }
             }
             &:hover,
             &.active {
@@ -168,9 +174,9 @@
                 @extend %br5;
                 @extend %txt-center;
                 @extend %pos-relative;
-                @include responsive-font(get-vw-pc(20px), 13px, 20px);
+                @include responsive-font(get-vw-pc(20px),$min-font-pc, 20px);
                 @include respond-to($vertabwidth) {
-                    @include responsive-font(get-vw-sp(20px), 12px,20px);
+                    @include responsive-font(get-vw-sp(20px),$min-font-sp,20px);
                 }
                 &:after {
                     bottom: 99%;
@@ -277,8 +283,14 @@
             background-color: $colorWhite;
             box-sizing: border-box;
             margin-right: calc-percent(($innerwidth - 1032)/5 , $innerwidth);
+            @include respond-to($vertabwidth) {
+              margin: 0 15px;
+            }
             &:last-child {
                 margin-right: 0;
+              @include respond-to($vertabwidth) {
+                margin: 0 15px;
+              }
             }
         }
         a {
@@ -296,11 +308,19 @@
         background-color: $colorWhite;
         &-list {
             @extend %tb-flex;
+            @include respond-to($vertabwidth) {
+              flex-wrap: wrap;
+              flex-direction: column;
+            }
             > li {
                 width: calc-percent(570,$innerwidth);
                 margin-right: calc-percent(30,$innerwidth);
                 &:last-child {
                     margin-right: 0;
+                }
+                @include respond-to($vertabwidth) {
+                  width: 100%;
+                  margin: 0;
                 }
             }
         }
@@ -334,9 +354,15 @@
             margin-bottom: 50px;
             font-size: 25px;
             @extend %bold;
+            @include  respond-to($vertabwidth ){
+             text-align: center;
+            }
             span {
                 margin-top: 8px;
                 margin-left: 0;
+                @include  respond-to($vertabwidth ){
+                  margin: 0 auto -4px;
+                }
             }
         }
     }
@@ -377,6 +403,10 @@
     width: 100%;
     height: 354px;
     max-width: 570px;
+    margin: 0 auto;
+    @include respond-to($vertabwidth) {
+        max-width: 100%;
+    }
 }
 #index .animated {
     animation-duration: 2s;

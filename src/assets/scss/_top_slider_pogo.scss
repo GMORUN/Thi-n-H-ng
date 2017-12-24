@@ -4,7 +4,7 @@
   position: relative;
   text-align: center;
   width: 100%;
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
   &-slide {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -27,7 +27,7 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-top: 5%;
+    //padding-top: 5%;
     &:after {
       background: #000 url("../images/pattarn.png") repeat scroll 0 0;
       content: "";
@@ -56,6 +56,7 @@
 }
 .slider-area {
   height: 100%;
+  height: 100vh;
   width: 100%;
   position: relative;
 }
