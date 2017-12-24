@@ -90,17 +90,30 @@
     margin: 0 0 15px 0;
     width: calc-percent($innerwidth - 260 - 50,$innerwidth);
     li {
-        align-items: center;
         line-height: (30/14);
-        @extend %tb-flex;
+        color: $colorWhite;
         &:first-child {
-            font-size: 16px;
-            color: $colorWhite;
             line-height: (30/16);
+            font-weight: 700;
+            @include responsive-font(get-vw-pc(16px), $min-font-pc, 16px);
+            @include respond-to($vertabwidth) {
+                @include responsive-font(get-vw-sp(16px), $min-font-sp,16px);
+            }
+        }
+        &:last-child {
+            align-items: center;
+            @extend %tb-flex;
+        }
+        p {
+          align-items: center;
+          @extend %tb-flex;
         }
         span {
             color: $colorWhite;
-            font-size: 14px;
+            @include responsive-font(get-vw-pc(14px), $min-font-pc, 14px);
+            @include respond-to($vertabwidth) {
+                @include responsive-font(get-vw-sp(14px), $min-font-sp,14px);
+            }
         }
         img {
             margin: 0;

@@ -1,120 +1,164 @@
 /* Banner slider */
-%slider-btn {
-  display: block;
-  position: absolute;
-  top: calc-percent(200,550);
-  z-index: 9;
-  width: calc-percent(57,1920);
-}
-.banner {
-  position: relative !important;
-}
-.banner .bx-prev {
-  left: calc-percent(25,1920);
-  @extend %slider-btn;
-}
-.banner .bx-next {
-  right: calc-percent(25,1920);
-  @extend %slider-btn;
-}
-.bx-wrapper {
-  box-shadow: 0 0 !important;
-  margin-bottom: 0 !important;
-  border: 0 !important;
-  background: none !important;
-}
-.banner .bx-wrapper .bx-pager.bx-default-pager a {
-  border-radius: 50% !important;
-}
-.banner .bx-wrapper .bx-pager {
-  bottom: 20px!important;
-}
-.banner .bx-wrapper .bx-pager.bx-default-pager a {
-  background: none !important;
-  border: 2px solid #4e4e4e;
-}
-.banner .bx-wrapper .bx-pager.bx-default-pager a:hover, .banner .bx-wrapper .bx-pager.bx-default-pager a.active {
-  border: 2px solid #da251c;
-  background: #da251c !important;
-}
+//%slider-btn {
+//  display: block;
+//  position: absolute;
+//  top: calc-percent(200,550);
+//  z-index: 9;
+//  width: calc-percent(57,1920);
+//}
+//.banner {
+//  position: relative !important;
+//}
+//.banner .bx-prev {
+//  left: calc-percent(25,1920);
+//  @extend %slider-btn;
+//}
+//.banner .bx-next {
+//  right: calc-percent(25,1920);
+//  @extend %slider-btn;
+//}
+//.bx-wrapper {
+//  box-shadow: 0 0 !important;
+//  margin-bottom: 0 !important;
+//  border: 0 !important;
+//  background: none !important;
+//}
+//.banner .bx-wrapper .bx-pager.bx-default-pager a {
+//  border-radius: 50% !important;
+//}
+//.banner .bx-wrapper .bx-pager {
+//  bottom: 20px!important;
+//}
+//.banner .bx-wrapper .bx-pager.bx-default-pager a {
+//  background: none !important;
+//  border: 2px solid #4e4e4e;
+//}
+//.banner .bx-wrapper .bx-pager.bx-default-pager a:hover, .banner .bx-wrapper .bx-pager.bx-default-pager a.active {
+//  border: 2px solid #da251c;
+//  background: #da251c !important;
+//}
 
 /*Product slider*/
-%product-slider-btn {
-  width: 40px;
-  height: 35px;
-  background: #ffffff;
+//%product-slider-btn {
+//  width: 40px;
+//  height: 35px;
+//  background: #ffffff;
+//
+//  position: absolute;
+//  bottom: 25px;
+//  line-height: 0;
+//}
+//#arr-prev{
+//  @extend %product-slider-btn;
+//  left: 28px;
+//  a {
+//    width: 100%;
+//    height:100%;
+//    display: flex;
+//    align-items: center;
+//    justify-content: center;
+//    @include respond-to($vertabwidth) {
+//      background: rgba(218, 37, 28, 0.3);
+//    }
+//    &:before {
+//      content: url(../../assets/images/icn_arr_prev.png);
+//      width: 10px;
+//      height: 17px;
+//    }
+//    &:hover {
+//      background: #da251c;
+//      &:before {
+//        content: url(../../assets/images/icn_arr_prev_hover.png);
+//      }
+//    }
+//  }
+//}
+//#arr-next{
+//  @extend %product-slider-btn;
+//  right: 28px;
+//  a {
+//    width: 100%;
+//    height:100%;
+//    display: flex;
+//    align-items: center;
+//    justify-content: center;
+//    @include respond-to($vertabwidth) {
+//      background: rgba(218, 37, 28, 0.3);
+//    }
+//    &:before {
+//      content: url(../../assets/images/icn_arr_next.png);
+//      width: 10px;
+//      height: 17px;
+//    }
+//    &:hover {
+//      background: #da251c;
+//      &:before {
+//        content: url(../../assets/images/icn_arr_next_hover.png);
+//      }
+//    }
+//  }
+//}
+//.product-line-wrap {
+//  position: relative;
+//  .bx-wrapper .bx-pager {
+//    bottom: 32px;
+//    width: auto;
+//    right: 88px;
+//    a {
+//      border-radius: 0 !important;
+//      background: #949494 !important;
+//      &:hover, &.active {
+//        background: #fff !important;
+//        @include respond-to($vertabwidth) {
+//          background: #da251c !important;
+//        }
+//      }
+//    }
+//  }
+//}
 
-  position: absolute;
-  bottom: 25px;
-  line-height: 0;
-}
-#arr-prev{
-  @extend %product-slider-btn;
-  left: 28px;
-  a {
-    width: 100%;
-    height:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include respond-to($vertabwidth) {
-      background: rgba(218, 37, 28, 0.3);
-    }
-    &:before {
-      content: url(../../assets/images/icn_arr_prev.png);
-      width: 10px;
-      height: 17px;
-    }
-    &:hover {
-      background: #da251c;
-      &:before {
-        content: url(../../assets/images/icn_arr_prev_hover.png);
-      }
-    }
-  }
-}
-#arr-next{
-  @extend %product-slider-btn;
-  right: 28px;
-  a {
-    width: 100%;
-    height:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include respond-to($vertabwidth) {
-      background: rgba(218, 37, 28, 0.3);
-    }
-    &:before {
-      content: url(../../assets/images/icn_arr_next.png);
-      width: 10px;
-      height: 17px;
-    }
-    &:hover {
-      background: #da251c;
-      &:before {
-        content: url(../../assets/images/icn_arr_next_hover.png);
-      }
-    }
-  }
-}
-.product-line-wrap {
-  position: relative;
-  .bx-wrapper .bx-pager {
-    bottom: 32px;
-    width: auto;
-    right: 88px;
-    a {
-      border-radius: 0 !important;
-      background: #949494 !important;
-      &:hover, &.active {
-        background: #fff !important;
-        @include respond-to($vertabwidth) {
-          background: #da251c !important;
-        }
-      }
-    }
-  }
-}
+// product list js,certification-list-js customer btn
 
+.product-list-js,
+.certification-list-js {
+  .slick-arrow {
+    top:50%;
+    margin-top: -25px;
+    padding: 0;
+    font-size: 0px;
+    border: 0;
+    background: transparent;
+    @extend %pos-absolute;
+  }
+  .slick-prev {
+    left:-3%;
+  }
+  .slick-next {
+    right:-3%;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    font-family: FontAwesome;
+    font-size: 50px;
+    color: #4e4e4e;
+  }
+  .slick-prev:before {
+    content: "\f104";
+  }
+  .slick-next:before {
+    content: "\f105";
+  }
+  .slick-track{
+    @extend %tb-flex;
+    .slick-slide{
+      height: auto;
+      @extend %tb-flex;
+      @extend %tb-flex-center;
+    }
+  }
+  &.slick-slider {
+    width: 95%;
+  }
+}
+// fix slider item the same height
 
