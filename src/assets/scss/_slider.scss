@@ -1,42 +1,42 @@
 /* Banner slider */
-%slider-btn {
-  display: block;
-  position: absolute;
-  top: calc-percent(200,550);
-  z-index: 9;
-  width: calc-percent(57,1920);
-}
-.banner {
-  position: relative !important;
-}
-.banner .bx-prev {
-  left: calc-percent(25,1920);
-  @extend %slider-btn;
-}
-.banner .bx-next {
-  right: calc-percent(25,1920);
-  @extend %slider-btn;
-}
-.bx-wrapper {
-  box-shadow: 0 0 !important;
-  margin-bottom: 0 !important;
-  border: 0 !important;
-  background: none !important;
-}
-.banner .bx-wrapper .bx-pager.bx-default-pager a {
-  border-radius: 50% !important;
-}
-.banner .bx-wrapper .bx-pager {
-  bottom: 20px!important;
-}
-.banner .bx-wrapper .bx-pager.bx-default-pager a {
-  background: none !important;
-  border: 2px solid #4e4e4e;
-}
-.banner .bx-wrapper .bx-pager.bx-default-pager a:hover, .banner .bx-wrapper .bx-pager.bx-default-pager a.active {
-  border: 2px solid #da251c;
-  background: #da251c !important;
-}
+//%slider-btn {
+//  display: block;
+//  position: absolute;
+//  top: calc-percent(200,550);
+//  z-index: 9;
+//  width: calc-percent(57,1920);
+//}
+//.banner {
+//  position: relative !important;
+//}
+//.banner .bx-prev {
+//  left: calc-percent(25,1920);
+//  @extend %slider-btn;
+//}
+//.banner .bx-next {
+//  right: calc-percent(25,1920);
+//  @extend %slider-btn;
+//}
+//.bx-wrapper {
+//  box-shadow: 0 0 !important;
+//  margin-bottom: 0 !important;
+//  border: 0 !important;
+//  background: none !important;
+//}
+//.banner .bx-wrapper .bx-pager.bx-default-pager a {
+//  border-radius: 50% !important;
+//}
+//.banner .bx-wrapper .bx-pager {
+//  bottom: 20px!important;
+//}
+//.banner .bx-wrapper .bx-pager.bx-default-pager a {
+//  background: none !important;
+//  border: 2px solid #4e4e4e;
+//}
+//.banner .bx-wrapper .bx-pager.bx-default-pager a:hover, .banner .bx-wrapper .bx-pager.bx-default-pager a.active {
+//  border: 2px solid #da251c;
+//  background: #da251c !important;
+//}
 
 /*Product slider*/
 %product-slider-btn {
@@ -114,6 +114,112 @@
         }
       }
     }
+  }
+}
+
+// product list js,certification-list-js, product-line-js customer btn
+.product-line-js,
+.product-list-js,
+.certification-list-js {
+    .slick-prev:before,
+    .slick-next:before {
+        font-family: FontAwesome;
+        font-size: 50px;
+        color: #4e4e4e;
+    }
+    .slick-prev:before {
+        content: "\f104";
+    }
+    .slick-next:before {
+        content: "\f105";
+    }
+}
+.product-line-js {
+    .slick-arrow {
+        width: 40px;
+        height: 35px;
+        bottom: 25px;
+        padding: 0;
+        font-size: 0px;
+        border: 0;
+        background: $colorWhite;
+        z-index: 999;
+        cursor: pointer;
+        @extend %pos-absolute;
+        &:hover {
+            background: #da251c;
+            &:before {
+                color: $colorWhite;
+            }
+        }
+    }
+    .slick-prev {
+        left:30px;
+    }
+    .slick-next {
+        right:30px;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        font-size: 30px;
+        color: #333333;
+    }
+    .slick-prev:before {
+        content: "\f104";
+    }
+    .slick-next:before {
+        content: "\f105";
+    }
+    .slick-dots  {
+        display: flex;
+        bottom: 35px;
+        right: 89px;
+        @extend %pos-absolute;
+        li {
+            border: 0;
+            background: #959595;
+            width: 10px;
+            height: 10px;
+            margin: 0 2px;
+            &.slick-active {
+                background: $colorWhite;
+            }
+        }
+        button {
+            border: 0;
+            padding: 0;
+            font-size: 0;
+        }
+    }
+}
+.product-list-js,
+.certification-list-js {
+  .slick-arrow {
+    top:50%;
+    margin-top: -25px;
+    padding: 0;
+    font-size: 0px;
+    border: 0;
+    background: transparent;
+    @extend %pos-absolute;
+  }
+  .slick-prev {
+    left:-3%;
+  }
+  .slick-next {
+    right:-3%;
+  }
+    // fix slider item the same height
+  .slick-track{
+    @extend %tb-flex;
+    .slick-slide{
+      height: auto;
+      @extend %tb-flex;
+      @extend %tb-flex-center;
+    }
+  }
+  &.slick-slider {
+    width: 95%;
   }
 }
 

@@ -1,13 +1,15 @@
-    .footer {
+.footer {
     background: #a31118 url("../images/bg_footer.png") no-repeat left top;
     background-size: 100% auto;
-    //@extend %pos-relative;
+    @include respond-to($vertabwidth) {
+        padding-top: calc-percent(60,$vertabwidth);
+    }
     .inner {
         height: 100%;
     }
     &-list {
-        background: rgba(220,220,220,0.2);
-        height: 53px;
+        background: rgba(32,32,32,0.2);
+        height: 50px;
         &-inner {
             height: 100%;
             align-items: center;
@@ -21,18 +23,35 @@
     }
     &-menu {
         height: 100%;
-        width: calc-percent(1010,$innerwidth);
+        width: calc-percent(860,$innerwidth);
+        @include respond-to($vertabwidth) {
+            width: auto;
+            margin-left: 0;
+        }
         li {
             padding: 0 38px;
             height: 100%;
             align-items: center;
+            flex:2;
+            justify-content: center;
             @extend %tb-flex;
             @extend %rb-consender;
+            &:first-child,
+            &:last-child {
+                flex:1;
+            }
             &:hover,
             &.active {
-                background: rgba(0,0,0,0.2);
+                background: rgba(78,78,78,0.2);
                 a {
                     color: $colorWhite;
+                }
+            }
+            &:nth-of-type(2),
+            &:nth-of-type(3),
+            &:nth-of-type(4) {
+                @include respond-to($vertabwidth) {
+                    display: none;
                 }
             }
         }
@@ -45,6 +64,10 @@
     }
     &-sns {
         width: calc-percent($innerwidth - 1010,$innerwidth);
+        @include respond-to($vertabwidth) {
+            width: auto;
+            margin-right: 0;
+        }
         li {
             width: 32px;
             height: 32px;
@@ -83,6 +106,9 @@
         @extend %tb-flex;
         p {
             margin: 0;
+            @include respond-to($vertabwidth) {
+                margin: 0 auto;
+            }
         }
     }
 }
@@ -90,17 +116,30 @@
     margin: 0 0 15px 0;
     width: calc-percent($innerwidth - 260 - 50,$innerwidth);
     li {
-        align-items: center;
         line-height: (30/14);
-        @extend %tb-flex;
+        color: $colorWhite;
         &:first-child {
-            font-size: 16px;
-            color: $colorWhite;
             line-height: (30/16);
+            font-weight: 700;
+            @include responsive-font(get-vw-pc(16px), $min-font-pc, 16px);
+            @include respond-to($vertabwidth) {
+                @include responsive-font(get-vw-sp(16px), $min-font-sp,16px);
+            }
+        }
+        &:last-child {
+            align-items: center;
+            @extend %tb-flex;
+        }
+        p {
+          align-items: center;
+          @extend %tb-flex;
         }
         span {
             color: $colorWhite;
-            font-size: 14px;
+            @include responsive-font(get-vw-pc(14px), $min-font-pc, 14px);
+            @include respond-to($vertabwidth) {
+                @include responsive-font(get-vw-sp(14px), $min-font-sp,14px);
+            }
         }
         img {
             margin: 0;

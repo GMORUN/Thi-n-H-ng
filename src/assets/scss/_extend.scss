@@ -15,7 +15,7 @@
     }
   }
 }
-%bold { font-weight: bold;}
+%bold { font-weight: 700;}
 %pos {
   &-relative {
     position: relative;
@@ -59,10 +59,13 @@
     }
 }
 %ttl {
-    font-size: 33px;
     text-transform: uppercase;
     line-height: (53/33);
     @extend %txt-center;
+    @include responsive-font(get-vw-pc(33px),$min-font-sp, 33px);
+    @include respond-to($vertabwidth) {
+        @include responsive-font(get-vw-sp(33px),$min-font-sp, 33px);
+    }
 }
 %br20 {
   border-radius: 20px;
@@ -96,12 +99,16 @@
   display: -webkit-box;
   -webkit-line-clamp: 2; /* number of lines to show */
   line-height: 1.6em;
-  max-height:15.6em ;
-  min-height: 15.6em;
+  //max-height:15.6em ;
+  //min-height: 15.6em;
+    max-height: 74%;
+    min-height: 74%;
   -webkit-box-orient: vertical;
   @include respond-to($vertabwidth) {
-    max-height:6.4em ;
-    min-height: 6.4em;
+    //max-height:6.4em ;
+    //min-height: 6.4em;
+      min-height: 90%;
+      max-height: 90%;
   }
 }
 %over2lineautoheight {

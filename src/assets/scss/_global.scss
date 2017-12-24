@@ -6,9 +6,9 @@ body {
     font-size: 15px;
     line-height: (25/15);
     font-family: 'Roboto', sans-serif;
-    @include responsive-font(get-vw-pc(15px), 13px, 15px);
+    @include responsive-font(get-vw-pc(15px),$min-font-sp, 15px);
     @include respond-to($vertabwidth) {
-        @include responsive-font(get-vw-sp(15px), 13px, 15px);
+        @include responsive-font(get-vw-sp(15px),$min-font-sp, 15px);
     }
 }
 html {
