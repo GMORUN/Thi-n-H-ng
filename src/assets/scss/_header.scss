@@ -14,35 +14,35 @@
         border-bottom: 5px solid #ed1c24;
         background: #fff;
     }
-    &-top {
-        background: url(../images/bg_main.png) no-repeat top center;
-        background-size: auto 80%;
-        background-attachment: fixed;
-        height: 100%;
-        &-color {
-            background: url("../images/bg_color_main.jpg") repeat center center;
-            background-size: 100% 100%;
-            height:100vh;
-            .inner {
-                @extend %pos-relative;
-            }
-        }
-        &-menu {
-            height:20vh;
-            margin-top: 10px;
-            .inner,
-            .menu {
-                height: 100%;
-            }
-            .menu {
-                margin-right: auto;
-                @extend %tb-flex-center;
-                a {
-                    color: $colorWhite;
-                }
-            }
-        }
-    }
+    //&-top {
+    //    background: url(../images/bg_main.png) no-repeat top center;
+    //    background-size: auto 80%;
+    //    background-attachment: fixed;
+    //    height: 100%;
+    //    &-color {
+    //        background: url("../images/bg_color_main.jpg") repeat center center;
+    //        background-size: 100% 100%;
+    //        height:100vh;
+    //        .inner {
+    //            @extend %pos-relative;
+    //        }
+    //    }
+    //    &-menu {
+    //        height:20vh;
+    //        margin-top: 10px;
+    //        .inner,
+    //        .menu {
+    //            height: 100%;
+    //        }
+    //        .menu {
+    //            margin-right: auto;
+    //            @extend %tb-flex-center;
+    //            a {
+    //                color: $colorWhite;
+    //            }
+    //        }
+    //    }
+    //}
     &-inner {
         align-items: center;
         justify-content: space-between;
@@ -144,7 +144,6 @@
     position: relative;
     @extend %tb-flex;
     li {
-      background: green;
         margin: 0 calc-percent(15,$innerwidth - 80 -20);
         flex: 2;
         @extend %tb-flex-center;
@@ -155,6 +154,7 @@
             display: none;
             position: absolute;
             top: 0;
+            left: 0;
             width: 245px;
         }
         &:hover,
@@ -166,9 +166,6 @@
         }
         &:last-child {
             flex: 1;
-            &:hover {
-                background-color: transparent;
-            }
             button {
                 background: 0;
                 border: 0;
@@ -180,9 +177,17 @@
             }
         }
     }
+    > li {
+        &:last-child {
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
     a {
-        padding: 3px 0;
         display: block;
+        padding: 3px 0;
+        width: 100%;
         color: $colorWhite;
         text-align: center;
         font-weight: bold;
@@ -192,7 +197,6 @@
         }
         span {
           display: block;
-
         }
     }
 }
@@ -305,11 +309,27 @@
         li {
             border-radius: 0;
             margin: 0;
+            &.active,
+            &:hover {
+                a {
+                    color: $colorWhite;
+                }
+            }
             a {
-                font-size: 16px;
+                padding: 7px 20px;
                 color: $colorMainTxt;
+                text-align: left;
                 font-weight: normal;
             }
+        }
+    }
+    &-product {
+        //width: 2000%!important;
+        max-width: 1170px;
+        //left: -400%!important;
+        flex: 10;
+        ul {
+            background: $colorWhite;
         }
     }
 }
@@ -328,7 +348,7 @@
         margin: 0;
     }
   .language {
-    margin-bottom: 24px;
+    margin-bottom: 10px;
   }
 }
 //menusp
