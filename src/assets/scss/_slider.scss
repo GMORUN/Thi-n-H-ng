@@ -39,86 +39,159 @@
 //}
 
 /*Product slider*/
-//%product-slider-btn {
-//  width: 40px;
-//  height: 35px;
-//  background: #ffffff;
-//
-//  position: absolute;
-//  bottom: 25px;
-//  line-height: 0;
-//}
-//#arr-prev{
-//  @extend %product-slider-btn;
-//  left: 28px;
-//  a {
-//    width: 100%;
-//    height:100%;
-//    display: flex;
-//    align-items: center;
-//    justify-content: center;
-//    @include respond-to($vertabwidth) {
-//      background: rgba(218, 37, 28, 0.3);
-//    }
-//    &:before {
-//      content: url(../../assets/images/icn_arr_prev.png);
-//      width: 10px;
-//      height: 17px;
-//    }
-//    &:hover {
-//      background: #da251c;
-//      &:before {
-//        content: url(../../assets/images/icn_arr_prev_hover.png);
-//      }
-//    }
-//  }
-//}
-//#arr-next{
-//  @extend %product-slider-btn;
-//  right: 28px;
-//  a {
-//    width: 100%;
-//    height:100%;
-//    display: flex;
-//    align-items: center;
-//    justify-content: center;
-//    @include respond-to($vertabwidth) {
-//      background: rgba(218, 37, 28, 0.3);
-//    }
-//    &:before {
-//      content: url(../../assets/images/icn_arr_next.png);
-//      width: 10px;
-//      height: 17px;
-//    }
-//    &:hover {
-//      background: #da251c;
-//      &:before {
-//        content: url(../../assets/images/icn_arr_next_hover.png);
-//      }
-//    }
-//  }
-//}
-//.product-line-wrap {
-//  position: relative;
-//  .bx-wrapper .bx-pager {
-//    bottom: 32px;
-//    width: auto;
-//    right: 88px;
-//    a {
-//      border-radius: 0 !important;
-//      background: #949494 !important;
-//      &:hover, &.active {
-//        background: #fff !important;
-//        @include respond-to($vertabwidth) {
-//          background: #da251c !important;
-//        }
-//      }
-//    }
-//  }
-//}
+%product-slider-btn {
+  width: 40px;
+  height: 35px;
+  background: #ffffff;
 
-// product list js,certification-list-js customer btn
+  position: absolute;
+  bottom: 25px;
+  line-height: 0;
+}
+#arr-prev{
+  @extend %product-slider-btn;
+  left: 28px;
+  a {
+    width: 100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include respond-to($vertabwidth) {
+      background: rgba(218, 37, 28, 0.3);
+    }
+    &:before {
+      content: url(../../assets/images/icn_arr_prev.png);
+      width: 10px;
+      height: 17px;
+    }
+    &:hover {
+      background: #da251c;
+      &:before {
+        content: url(../../assets/images/icn_arr_prev_hover.png);
+      }
+    }
+  }
+}
+#arr-next{
+  @extend %product-slider-btn;
+  right: 28px;
+  a {
+    width: 100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include respond-to($vertabwidth) {
+      background: rgba(218, 37, 28, 0.3);
+    }
+    &:before {
+      content: url(../../assets/images/icn_arr_next.png);
+      width: 10px;
+      height: 17px;
+    }
+    &:hover {
+      background: #da251c;
+      &:before {
+        content: url(../../assets/images/icn_arr_next_hover.png);
+      }
+    }
+  }
+}
+.product-line-wrap {
+  position: relative;
+  .bx-wrapper .bx-pager {
+    bottom: 32px;
+    width: auto;
+    right: 88px;
+    a {
+      border-radius: 0 !important;
+      background: #949494 !important;
+      &:hover, &.active {
+        background: #fff !important;
+        @include respond-to($vertabwidth) {
+          background: #da251c !important;
+        }
+      }
+    }
+  }
+}
 
+// product list js,certification-list-js, product-line-js customer btn
+.product-line-js,
+.product-list-js,
+.certification-list-js {
+    .slick-prev:before,
+    .slick-next:before {
+        font-family: FontAwesome;
+        font-size: 50px;
+        color: #4e4e4e;
+    }
+    .slick-prev:before {
+        content: "\f104";
+    }
+    .slick-next:before {
+        content: "\f105";
+    }
+}
+.product-line-js {
+    .slick-arrow {
+        width: 40px;
+        height: 35px;
+        bottom: 25px;
+        padding: 0;
+        font-size: 0px;
+        border: 0;
+        background: $colorWhite;
+        z-index: 999;
+        cursor: pointer;
+        @extend %pos-absolute;
+        &:hover {
+            background: #da251c;
+            &:before {
+                color: $colorWhite;
+            }
+        }
+    }
+    .slick-prev {
+        left:30px;
+    }
+    .slick-next {
+        right:30px;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        font-size: 30px;
+        color: #333333;
+    }
+    .slick-prev:before {
+        content: "\f104";
+    }
+    .slick-next:before {
+        content: "\f105";
+    }
+    .slick-dots  {
+        display: flex;
+        bottom: 35px;
+        right: 89px;
+        @extend %pos-absolute;
+        li {
+            border: 0;
+            background: #959595;
+            width: 10px;
+            height: 10px;
+            margin: 0 2px;
+            &.slick-active {
+                background: $colorWhite;
+            }
+        }
+        button {
+            border: 0;
+            padding: 0;
+            font-size: 0;
+        }
+    }
+}
 .product-list-js,
 .certification-list-js {
   .slick-arrow {
@@ -136,18 +209,7 @@
   .slick-next {
     right:-3%;
   }
-  .slick-prev:before,
-  .slick-next:before {
-    font-family: FontAwesome;
-    font-size: 50px;
-    color: #4e4e4e;
-  }
-  .slick-prev:before {
-    content: "\f104";
-  }
-  .slick-next:before {
-    content: "\f105";
-  }
+    // fix slider item the same height
   .slick-track{
     @extend %tb-flex;
     .slick-slide{
@@ -160,5 +222,5 @@
     width: 95%;
   }
 }
-// fix slider item the same height
+
 

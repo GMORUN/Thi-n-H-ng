@@ -1,16 +1,11 @@
 .main {
+    padding-top: 40px;
     &-ttl {
-        padding-top: 40px;
         padding-bottom: 3px;
         border-bottom: 1px solid #e5e5e5;
+        font-weight:400;
         @extend %rb-consender;
         @extend %ttl;
-        @include respond-to($vertabwidth) {
-            font-size: get-vw($vertabwidth,33);
-        }
-        @include respond-to($spwidth) {
-            font-size: get-item(33);
-        }
         span {
             margin: 0 auto -4px;
             display: block;
@@ -125,15 +120,22 @@
 }
 //product
 .product {
+    padding-top: calc-percent(40,$innerwidth);
     background-color: $colorWhite;
     background-image: url("../images/map.png");
     background-repeat: no-repeat;
     background-position: top right;
     background-attachment: fixed;
+    @include respond-to($vertabwidth) {
+        padding-top: calc-percent(40,$vertabwidth);
+    }
     &-list {
-        margin-top: 38px;
+        margin-top: calc-percent(38,$innerwidth);
         flex-wrap: wrap;
         @extend %tb-flex;
+        @include respond-to($vertabwidth) {
+            margin-top: calc-percent(38,$vertabwidth);
+        }
         li {
             width: calc-percent(270,$innerwidth);
             align-items: center;
@@ -168,7 +170,6 @@
                 margin: 0 auto;
                 padding: 0 18px;
                 line-height: (40/20);
-                font-size: 20px;
                 color: $colorWhite;
                 background-color: $colorRed;
                 @extend %br5;
@@ -211,16 +212,25 @@
         }
     }
     &-line {
-        padding-bottom: 51px;
+        padding-bottom: calc-percent(56,$innerwidth);
         background: url("../images/index/brn2.jpg") no-repeat center center;
         background-size: cover;
+        @include respond-to($vertabwidth) {
+            padding-bottom: calc-percent(30,$vertabwidth);
+        }
         &-ttl {
-            padding: 40px 0 30px;
+            padding: calc-percent(40,$innerwidth) 0 calc-percent(30,$innerwidth);
             color: $colorWhite;
             @extend %ttl;
             @extend %rb-consender;
+            @include respond-to($vertabwidth) {
+                padding: calc-percent(40,$vertabwidth) 0 calc-percent(30,$vertabwidth);
+            }
             img {
-                margin-top: 15px;
+                margin-top: calc-percent(15,$innerwidth);
+                @include respond-to($vertabwidth) {
+                    padding: calc-percent(15,$vertabwidth);
+                }
             }
         }
         &-list {
@@ -228,30 +238,35 @@
                 border:  15px solid rgba(255,255,255,0.2);
                 box-sizing: border-box;
                 @extend %pos-relative;
+                @include respond-to($vertabwidth) {
+                    border-width: 10px;
+                }
             }
         }
         &-info {
             width: calc-percent(400,$innerwidth );
-            padding: 30px 25px;
-            right: calc-percent(15,$innerwidth);
-            top: calc-percent(15,479);
-            height: 85%;
+            padding: calc-percent(30,$innerwidth) calc-percent(25,$innerwidth);
+            right: 15px;
+            top: 15px ;
+            height: 82%;
             background-color: $colorWhite;
             @extend %pos-absolute;
             @include respond-to($vertabwidth) {
               position: static;
               width: 100%;
               height: auto;
-              padding-bottom: 70px;
             }
             .ttl {
-                font-size: 25px;
                 color: $colorBlack;
                 text-transform: inherit;
                 line-height: 1.1 !important;
+                @include responsive-font(get-vw-pc(25px),$min-font-sp,25px);
+                @include respond-to($vertabwidth) {
+                    @include responsive-font(get-vw-sp(25px),$min-font-sp,25px);
+                }
                 @extend %ttl;
                 img {
-                    margin: 10px auto;
+                    margin: calc-percent(10,400) auto;
                 }
             }
             .link {
@@ -269,10 +284,11 @@
 }
 //certification
 .certification {
-    padding: 40px 0 47px;
+    padding: calc-percent(40,$innerwidth) 0 calc-percent(47,$innerwidth);
     background-color: #edebeb;
     .main-ttl {
         padding-top: 0;
+        margin-bottom: calc-percent(45,$innerwidth);
     }
     &-list {
         @extend %tb-flex;
@@ -297,14 +313,11 @@
             display: block;
         }
     }
-    .main-ttl {
-        margin-bottom: 45px;
-    }
 }
 // info-history
 .info {
     &-history {
-        padding: 40px 0 60px;
+        padding: calc-percent(40,$innerwidth) 0 calc-percent(60,$innerwidth);
         background-color: $colorWhite;
         &-list {
             @extend %tb-flex;
@@ -333,10 +346,16 @@
         }
         &-date {
             color: #868686;
+            @include responsive-font(get-vw-pc(13px),10px, 13px);
+            @include respond-to($vertabwidth) {
+                @include responsive-font(get-vw-sp(13px),10px, 13px);
+            }
         }
-        &-txt,
-        &-date {
-            font-size: 14px;
+        &-txt {
+            @include responsive-font(get-vw-pc(14px),12px, 14px);
+            @include respond-to($vertabwidth) {
+                @include responsive-font(get-vw-sp(14px),12px, 14px);
+            }
         }
         &-txt {
             margin-top: 5px;
@@ -351,11 +370,16 @@
         }
         .main-ttl {
             text-align: left;
-            margin-bottom: 50px;
-            font-size: 25px;
+            margin-bottom: calc-percent(50,$innerwidth);
+            @include responsive-font(get-vw-pc(25px),$min-font-sp, 25px);
+            @include respond-to($vertabwidth) {
+                @include responsive-font(get-vw-sp(33px),$min-font-sp, 33px);
+            }
             @extend %bold;
             @include  respond-to($vertabwidth ){
              text-align: center;
+                font-weight:400;
+                margin-bottom: calc-percent(40,$vertabwidth);
             }
             span {
                 margin-top: 8px;
@@ -401,13 +425,27 @@
 }
 .video {
     width: 100%;
-    height: 354px;
+    padding-top: calc-percent(355,570);
     max-width: 570px;
     margin: 0 auto;
+    @extend %pos-relative;
     @include respond-to($vertabwidth) {
         max-width: 100%;
+        padding-top: calc-percent(454,736);
+    }
+    p {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        @extend %pos-absolute;
     }
 }
-#index .animated {
-    animation-duration: 2s;
+#index {
+    .animated {
+        animation-duration: 2s;
+    }
+    .main {
+        padding-top: 0;
+    }
 }

@@ -95,9 +95,9 @@ $(document).ready(function () {
         }
     })
     //meanmenu
-    // $('.header-menu-content').meanmenu( {
-    //     meanScreenWidth: "768"
-    // });
+    $('.header-menu-content-js').meanmenu( {
+        meanScreenWidth: "768"
+    });
     // slider product list sp
     // $('.bxslider').bxSlider({
     //   minSlides: 2,
@@ -136,13 +136,21 @@ $(document).ready(function () {
     //product line js
     $('.product-line-js').slick({
       infinite: true,
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 3000,
-      dots: false,
-      prevArrow: false,
-      nextArrow: false,
+      dots: true,
+        arrows: true,
       fade: true,
-      cssEase: 'linear'
+      cssEase: 'linear',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    dots: false,
+                }
+            }
+        ]
     });
     //product-list-js
     $('.product-list-js').slick({
