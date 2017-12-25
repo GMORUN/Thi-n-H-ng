@@ -317,7 +317,7 @@
 // info-history
 .info {
     &-history {
-        padding: calc-percent(40,$innerwidth) 0 calc-percent(60,$innerwidth);
+        padding: calc-percent(40,$innerwidth) 0 0;
         background-color: $colorWhite;
         &-list {
             @extend %tb-flex;

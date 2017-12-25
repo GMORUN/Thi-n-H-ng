@@ -1,8 +1,10 @@
 .footer {
+    margin-top: calc-percent(70,$innerwidth);
     background: #a31118 url("../images/bg_footer.png") no-repeat left top;
     background-size: 100% auto;
     @include respond-to($vertabwidth) {
         padding-top: calc-percent(60,$vertabwidth);
+        margin-top: calc-percent(40,$vertabwidth);
     }
     .inner {
         height: 100%;

@@ -46,6 +46,7 @@
     &-inner {
         align-items: center;
         justify-content: space-between;
+        @extend %pos-relative;
         @extend %tb-flex;
     }
     .logo {
@@ -149,7 +150,6 @@
         @extend %tb-flex-center;
         @extend %tb-flex;
         @extend %br20;
-        position: relative;
         div {
             display: none;
             position: absolute;
@@ -294,6 +294,7 @@
     top: 75px;
 }
 .sub-menu {
+    @extend %pos-relative;
     &-small {
         position: relative;
         width: 100%;
