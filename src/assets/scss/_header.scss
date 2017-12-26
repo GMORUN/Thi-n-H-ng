@@ -3,6 +3,9 @@
     top: 0;
     width: 100%;
     z-index: 9;
+    @include respond-to($vertabwidth) {
+        display: none;
+    }
     &-language {
         border-bottom: 1px solid #895c09;
         padding: 5px 0;
