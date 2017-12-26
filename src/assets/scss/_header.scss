@@ -395,10 +395,27 @@
     }
 }
 //menusp
-.mean-container .mean-nav ul {
+.mean-container {
     display: block;
-}
-.mean-container .mean-bar {
-    position: absolute;
-    width: 50%;
+    .mean-nav {
+        background: $colorWhite;
+        ul {
+            display: block;
+            li {
+                a {
+                    color: #333232;
+                }
+                &:hover,
+                .active {
+                    a {
+                        color: $colorWhite;
+                    }
+                }
+            }
+        }
+    }
+    .mean-bar {
+        position: absolute;
+        width: 50%;
+    }
 }
