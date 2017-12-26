@@ -1,5 +1,72 @@
 .timeline {
     background: url("../images/bg_timeline.jpg") repeat-y center top;
     width: 100%;
-    display: flex;
+    padding-top: get-vw(1170,54);
+    &-wrap {
+        width: 100%;
+        display: flex;
+        position: relative;
+        margin-bottom: get-vw(1170,54);
+    }
+    &-wrap1 {
+        flex-direction: row-reverse;
+    }
+    &-left, &-right {
+        width: 50%;
+    }
+    &-left {
+        margin: 0;
+        padding-right: calc-percent(40,585) ;
+        &-img {
+            position: relative;
+            margin-left: 0;
+            width: 95%;
+            margin-right: 0;
+            img {
+                margin-right: 0;
+            }
+            &:after {
+                left: 100%;
+                @extend %arrow;
+                border-left: 18px solid $colorRed;
+            }
+        }
+        .timeline-year {
+            text-align: right;
+        }
+    }
+    &-right {
+        padding-left: calc-percent(40,585) ;
+        &-img {
+            position: relative;
+            margin-left: 0;
+            width: 95%;
+            img {
+                margin-left: 0;
+            }
+            &:after {
+                right: 100%;
+                @extend %arrow;
+                border-right: 18px solid $colorRed;
+            }
+        }
+    }
+    &-year {
+        @include responsive-font(get-vw-pc(50px), 25px, 50px);
+        font-weight: bold;
+        color: $colorRed;
+        @include respond-to($vertabwidth) {
+            @include responsive-font(get-vw-sp(50px), 50px, 25px);
+        }
+    }
+    &-point {
+        left: 49.47%;
+        font-size: 20px;
+        color: $colorRed;
+        position: absolute;
+        top: 35px;
+        @include respond-to(1100) {
+            left: 49.3%;
+        }
+    }
 }

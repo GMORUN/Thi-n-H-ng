@@ -16,7 +16,7 @@
     background: $colorLightGrey;
     color: $colorDarkGrey;
     @include responsive-font(get-vw-pc(16px), 13px, 16px);
-    @include respond-to(768){
+    @include respond-to($vertabwidth){
       width: calc-percent(360,736);
       margin: auto calc-percent(16,736) get-vw(736,16) auto !important;
       @include responsive-font(get-vw-sp(20px), 13px, 20px);
