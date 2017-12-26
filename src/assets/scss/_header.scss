@@ -149,10 +149,14 @@
         @extend %tb-flex-center;
         @extend %tb-flex;
         @extend %br20;
+        @include respond-to($vertabwidth) {
+            margin: 0 auto;
+            border-radius: 0;
+        }
         div {
             display: none;
             position: absolute;
-            top: 25px;
+            top: 32px;
             left: 0;
             width: 245px;
         }
@@ -326,12 +330,40 @@
     }
     &-product {
         width: 100% !important;
-        background: transparent;
+        top: 52px !important;
         .product-list {
-            margin-top: 39px;
+            margin-top: 19px;
             background: $colorWhite;
+            &:before {
+                right: 59% !important;
+            }
             li {
-                margin-right: 2.5641025641%;
+                width: calc-percent(210,$innerwidth);
+                margin-right: calc-percent(30,$innerwidth) ;
+                border: 0;
+                &:nth-of-type(5n+5) {
+                    margin-right: 0 ;
+                }
+                &:nth-of-type(4n+4) {
+                    margin-right: calc-percent(30,$innerwidth) ;
+                }
+                &:hover,
+                &.active {
+                    background-color: inherit !important;
+                    border: 0;
+                }
+                a {
+                    padding: 0;
+                }
+                span {
+                    @include responsive-font(get-vw-pc(16px),$min-font-pc, 16px);
+                    @include respond-to($vertabwidth) {
+                        @include responsive-font(get-vw-sp(16px),$min-font-sp,16px);
+                    }
+                }
+                img {
+                    border-radius: 0;
+                }
             }
         }
     }
@@ -351,7 +383,10 @@
         margin: 0;
     }
     .sub-menu-product {
-
+        top: 84px !important;
+    }
+    .product-list {
+        margin-top: 20px;
     }
     .language {
         margin-bottom: 10px;
@@ -361,6 +396,7 @@
 .mean-container .mean-nav ul {
     display: block;
 }
-.mean-bar {
+.mean-container .mean-bar {
     position: absolute;
+    width: 50%;
 }
