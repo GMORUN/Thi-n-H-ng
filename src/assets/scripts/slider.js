@@ -18,11 +18,6 @@ $(document).ready(function () {
             $('.search-form-js').slideDown()
         }
     })
-    
-    //meanmenu
-    $('.header-menu-content-js').meanmenu( {
-        meanScreenWidth: "768"
-    });
 
     //slider product line js
     $('.product-line-js').slick({
