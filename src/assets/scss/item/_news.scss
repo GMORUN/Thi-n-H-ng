@@ -1,0 +1,52 @@
+#news {
+    .main-ttl {
+        margin: calc-percent(35,$innerwidth) auto calc-percent(38,$innerwidth);
+    }
+    .info-company-list {
+        li {
+            border-bottom: 1px dashed #aaaaaa;
+            padding-bottom:18px;
+        }
+    }
+    .info-company {
+        &-img {
+            width: calc-percent(273, $innerwidth);
+        }
+        &-content {
+            width: calc-percent($innerwidth - 273, $innerwidth);
+        }
+    }
+    .info-history {
+        &-ttl {
+            @include responsive-font(get-vw-pc(20px),$min-font-pc, 20px);
+            @include respond-to($vertabwidth) {
+                @include responsive-font(get-vw-sp(20px),$min-font-sp, 20px);
+            }
+        }
+        &-txt {
+            @include responsive-font(get-vw-pc(16px),$min-font-pc, 16px);
+            @include respond-to($vertabwidth) {
+                @include responsive-font(get-vw-sp(16px),$min-font-sp, 16px);
+            }
+        }
+        &-time {
+            margin: calc-percent(20,$innerwidth) auto calc-percent(25,$innerwidth);
+        }
+        &-date {
+            @extend %tb-flex;
+            @include responsive-font(get-vw-pc(14px),10px, 14px);
+            @include respond-to($vertabwidth) {
+                @include responsive-font(get-vw-sp(14px),10px, 14px);
+            }
+            @include respond-to($vertabwidth) {
+                justify-content: space-between;
+            }
+            span {
+                width: calc-percent(184,$innerwidth - 273);
+                @include respond-to($vertabwidth) {
+                    width: auto;
+                }
+            }
+        }
+    }
+}

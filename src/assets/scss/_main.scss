@@ -142,7 +142,7 @@
             margin-right: calc-percent(30,$innerwidth);
             box-sizing: border-box;
             margin-bottom: get-vw($innerwidth,28);
-            border: 1px solid #fff;
+            border: 1px solid transparent;
             @extend %tb-flex;
             @extend %br8;
             @include respond-to($vertabwidth) {
@@ -259,7 +259,7 @@
                 color: $colorBlack;
                 text-transform: inherit;
                 line-height: 1.1 !important;
-                @include responsive-font(get-vw-pc(25px),$min-font-sp,25px);
+                @include responsive-font(get-vw-pc(25px),$min-font-pc,25px);
                 @include respond-to($vertabwidth) {
                     @include responsive-font(get-vw-sp(25px),$min-font-sp,25px);
                 }
@@ -370,7 +370,7 @@
         .main-ttl {
             text-align: left;
             margin-bottom: calc-percent(50,$innerwidth);
-            @include responsive-font(get-vw-pc(25px),$min-font-sp, 25px);
+            @include responsive-font(get-vw-pc(25px),$min-font-pc, 25px);
             @include respond-to($vertabwidth) {
                 @include responsive-font(get-vw-sp(33px),$min-font-sp, 33px);
             }

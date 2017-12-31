@@ -4,7 +4,7 @@ $(document).ready(function () {
         $(event.target).closest('p').append('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/jlDDxg7gxLU?autoplay=1" frameborder="0" allowfullscreen></iframe>');
         $(event.target).remove();
     });
-    
+
     // slider main banner
     var mySlider = $('.pogoSlider').pogoSlider({
         pauseOnHover: false
@@ -75,5 +75,8 @@ $(document).ready(function () {
     $(window).on('resize orientationchange', function() {
       $('.product-list-js,.certification-list-js').slick('resize');
     });
-
+    //main slider
+    var mySlider = $('.pogoSlider').pogoSlider({
+        pauseOnHover: false
+    }).data('plugin_pogoSlider');
 })

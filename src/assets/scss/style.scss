@@ -6,14 +6,16 @@
 @import "webfont";
 @import "slick";
 @import "main";
-@import "header";
-@import "footer";
+//@import "header";
+@import "components/footer";
 @import "slider";
 @import "top_slider_pogo";
 @import "page_common";
-//@import "header_top";
 //hienht
-@import "test";
+@import "item/product_detail";
+@import "item/news";
+@import "components/header";
+@import "components/pagging";
 //myht
 @import "item/_video";
 @import "item/_vision";

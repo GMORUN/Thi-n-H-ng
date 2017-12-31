@@ -92,7 +92,7 @@
     }
     &-logo-info {
         margin-top: 19px;
-        align-items: flex-end;
+        align-items: center;
         @extend %tb-flex;
         .logo {
             width: calc-percent(260,$innerwidth);
@@ -128,23 +128,8 @@
                 @include responsive-font(get-vw-sp(16px), $min-font-sp,16px);
             }
         }
-        &:last-child {
-            align-items: center;
-            @extend %tb-flex;
-        }
-        p {
-          align-items: center;
-          @extend %tb-flex;
-        }
-        span {
-            color: $colorWhite;
-            @include responsive-font(get-vw-pc(14px), $min-font-pc, 14px);
-            @include respond-to($vertabwidth) {
-                @include responsive-font(get-vw-sp(14px), $min-font-sp,14px);
-            }
-        }
-        img {
-            margin: 0;
+        i {
+            margin-right: 5px;
         }
     }
 }

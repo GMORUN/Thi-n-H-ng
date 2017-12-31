@@ -84,7 +84,8 @@ gulp.task('babelfy', () => {
             './src/assets/scripts/slick.min.js',
             './src/assets/scripts/wow.min.js',
             './src/assets/scripts/common.js',
-            './src/assets/scripts/slider.js'
+            './src/assets/scripts/slider.js',
+            './src/assets/scripts/scroll.js'
         ])
         .pipe($.sourcemaps.init())
         .pipe($.babel({
@@ -106,7 +107,8 @@ gulp.task('order-scripts', () =>
             './src/assets/scripts/slick.min.js',
             './src/assets/scripts/wow.min.js',
             './src/assets/scripts/common.js',
-            './src/assets/scripts/slider.js'
+            './src/assets/scripts/slider.js',
+            './src/assets/scripts/scroll.js'
         ])
         // Output files
         .pipe($.size({title: 'scripts'}))
@@ -152,7 +154,7 @@ gulp.task('html', () => {
             searchPath: '{.tmp,app}',
             noAssets: true
         }))
-        
+
         // Minify any HTML
         // .pipe($.if('*.html', $.htmlmin({
         //   removeComments: true,
@@ -183,7 +185,7 @@ gulp.task('serve', ['order-scripts', 'browserify', 'styles'], () => {
         scrollElementMapping: ['main', '.mdl-layout'],
         server: ['.tmp', 'src']
     });
-    
+
     gulp.watch(['src/**/*.html'], reload);
     gulp.watch(['src/assets/**/**/*.{scss,css}'], ['styles']);
     gulp.watch(['src/assets/scripts/**/*.js'], ['babelfy', 'browserify', reload]);
@@ -200,7 +202,7 @@ gulp.task('serve:css', ['styles'], () => {
         scrollElementMapping: ['main', '.mdl-layout'],
         server: ['.tmp', 'src']
     });
-    
+
     gulp.watch(['src/assets/**/*.html'], reload);
     gulp.watch(['src/assets/**/**/*.{scss,css}'], ['styles']);
     gulp.watch(['src/assets/images/**/*'], reload);

@@ -1,0 +1,21 @@
+.pagging {
+    display: block;
+    margin: 0 auto;
+    @extend %txt-center;
+    li {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        line-height: 2.5;
+        background-color: #cccccc;
+        border-radius: 5px;
+        &.active,
+        &:hover {
+            background-color: $colorRed;
+        }
+        a {
+            display: block;
+            color: $colorWhite;
+        }
+    }
+}

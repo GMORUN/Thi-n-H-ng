@@ -1,0 +1,166 @@
+#product {
+    .main {
+        padding-top: 0;
+    }
+    .footer {
+        margin-top: 0;
+    }
+    .bread-crumb {
+        display: inline-block;
+        margin-top: calc-percent(60,$innerwidth);
+        background-color: #747476;
+        border-radius: 5px;
+        padding: 5px 15px;
+    }
+    .main-ttl {
+        color: $colorRed;
+        border-bottom: 0;
+        margin-bottom: calc-percent(32,$innerwidth);
+    }
+}
+.banner {
+    @extend %pos-relative;
+    &-info {
+        top:0;
+        height: 100%;
+        width: 100%;
+        @extend %pos-absolute;
+        .inner {
+            height: 100%;
+            @extend %pos-relative;
+        }
+    }
+}
+.menu {
+    &-product {
+        width: calc-percent(220,$innerwidth);
+        min-width: 220px;
+        bottom: 0;
+        border: 1px solid #fcfcfc;
+        background-color: $colorRed;
+        @extend %pos-absolute;
+        li {
+
+        }
+        a {
+            display: block;
+            padding: calc-percent(2,220) 15px;
+            color: $colorWhite;
+            @include responsive-font(get-vw-pc(15px),$min-font-pc, 15px);
+            @include respond-to($vertabwidth) {
+                @include responsive-font(get-vw-sp(15px),$min-font-sp, 15px);
+            }
+            //@media only screen and (min-width: 1348 + 'px') {
+            //    padding: calc-percent(5,220) 15px;
+            //}
+            i {
+                margin-right: 6px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+.product {
+    &-detail {
+        padding: calc-percent(60, $innerwidth) 0 calc-percent(70,$innerwidth);
+        &#product_1,
+        &#product_3,
+        &#product_5,
+        &#product_7,
+        &#product_9 {
+            background-color: #edebeb;
+        }
+        &#product_2,
+        &#product_4,
+        &#product_6,
+        &#product_8 {
+            .main-ttl {
+                text-align: left;
+            }
+        }
+        &#product_8 {
+            .img {
+                width: calc-percent(695,$innerwidth);
+                @include respond-to($vertabwidth) {
+                    display: block;
+                }
+            }
+            .info {
+                width: calc-percent($innerwidth - 695 ,$innerwidth);
+                border: 0;
+            }
+            .info-ingredient {
+                width: 100%;
+            }
+        }
+        &-info {
+            @extend %tb-flex;
+            >li {
+                align-items: center;
+                @extend %tb-flex;
+            }
+            .img {
+                width: calc-percent(475,$innerwidth);
+                @include respond-to($vertabwidth) {
+                    display: none;
+                }
+            }
+            .info {
+                width: calc-percent($innerwidth - 475,$innerwidth);
+                border: 1px solid #e3dfdf;
+                @include respond-to($vertabwidth) {
+                    width: 100%;
+                }
+                &-ingredient,
+                &-menu {
+                    height: 100%;
+                    background-color: #e3dfdf;
+                }
+                &-ingredient {
+                    width: 59%;
+                    padding: 20px;
+                    background-color: $colorWhite;
+                    .ttl {
+                        @extend %bold;
+                        @include responsive-font(get-vw-pc(20px),$min-font-pc, 20px);
+                        @include respond-to($vertabwidth) {
+                            @include responsive-font(get-vw-sp(20px),$min-font-sp, 20px);
+                        }
+                        &-sub {
+                            margin-bottom: 9px;
+                        }
+                    }
+                    .permission {
+                        color: #ff0000;
+                    }
+                    .thumb {
+                        margin-top: 9px;
+                    }
+                }
+                &-menu {
+                    width: 41%;
+                    li {
+                        &.active ,
+                        &:hover {
+                            background-color: $colorRed;
+                            a {
+                                color: $colorWhite;
+                                i {
+                                    color: $colorWhite;
+                                }
+                            }
+                        }
+                        a {
+                            display: block;
+                            padding: 10px 20px;
+                            color: #3d3d3d;
+                            i {
+                                margin-right: 9px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
