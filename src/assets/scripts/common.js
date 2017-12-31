@@ -34,4 +34,15 @@ $(document).ready(function () {
     $('.header-menu-content-js').meanmenu( {
         meanScreenWidth: "768"
     });
+    /*
+    Scroll product page
+     */
+    function scrollTo(el) {
+        var element = $(el);
+        $('html,body').animate({scrollTop: element.offset().top},'slow');
+    }
+    $('.menu-product-js li a').on('click',function () {
+        var ele = $(this).attr('href');
+        scrollTo(ele);
+    })
 })
