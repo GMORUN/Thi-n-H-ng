@@ -1,0 +1,107 @@
+.company {
+    &-group {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-top: calc-percent(78,1170);
+        &-left {
+            width: 48%;
+            @include respond-to($vertabwidth) {
+                width: 100%;
+                margin-bottom: calc-percent(20,736);
+            }
+            .title {
+                font-weight: bold;
+                @include responsive-font(get-vw-pc(22px), 15px, 22px);
+                @include respond-to($vertabwidth){
+                    @include responsive-font(get-vw-sp(22px), 15px, 22px);
+                }
+                margin-bottom: calc-percent(30,1170);
+                &:last-child {
+                    margin-top: 10px;
+                }
+            }
+            .number {
+                background: $colorRed;
+                color: $colorWhite;
+                border-radius: 50%;
+                width: 2.72vw;
+                height: 2.72vw;
+                display: inline-flex;
+                text-align: center;
+                margin-right: 10px;
+                align-items:center;
+                justify-content:center;
+                @include respond-to($vertabwidth) {
+                    width: 5vw;
+                    height: 5vw;
+                }
+            }
+            p {
+                margin-bottom: calc-percent(40,1170);
+            }
+        }
+        &-right {
+            position: relative;
+            width: 52%;
+            @include respond-to($vertabwidth) {
+                width: 100%;
+            }
+            .north {
+                &-company {
+                    position: absolute;
+                    top: 42px;
+                    right: 0;
+                    border: 1px solid $colorRed;
+                    width: calc-percent(295,1170/2);
+                    border-radius: 8px;
+                    text-align: center;
+                    padding: 0 30px;
+                    @include respond-to($vertabwidth) {
+                        padding: 0 2%;
+                        top: 20px;
+                        width: calc-percent(294,736);
+                    }
+                    img {
+                        margin-top: -25%;
+                        margin-bottom: 10px;
+                        @include respond-to($vertabwidth) {
+                            width: 50%;
+                        }
+                    }
+                    &:after {
+                        right: 100%;
+                        @extend %arrow;
+                        top: 40%;
+                        border-right: 18px solid $colorRed;
+                        @include respond-to($vertabwidth) {
+                            border-right: 12px solid $colorRed;
+                            border-top: 12px solid transparent;
+                            border-bottom: 12px solid transparent;
+                        }
+                    }
+                    p {
+                        margin-bottom:15px;
+                    }
+                }
+            }
+            .title {
+                font-weight: bold;
+                color: $colorRed;
+                margin-bottom: 7px !important;
+                @include responsive-font(get-vw-pc(20px), 14px, 20px);
+                @include respond-to($vertabwidth){
+                    @include responsive-font(get-vw-sp(20px), 14px, 20px);
+                }
+            }
+        }
+
+    }
+    &-map {
+        margin-left: 0;
+        @include respond-to($vertabwidth){
+            width: calc-percent(439,736);
+            margin-left: auto;
+        }
+    }
+}
