@@ -1,7 +1,23 @@
-#news {
+#news,
+#news-detail {
     .main-ttl {
         margin: calc-percent(35,$innerwidth) auto calc-percent(38,$innerwidth);
     }
+    .info-history {
+        &-ttl {
+            @include responsive-font(get-vw-pc(20px),$min-font-pc, 20px);
+            @include respond-to($vertabwidth) {
+                @include responsive-font(get-vw-sp(20px),$min-font-sp, 20px);
+            }
+        }
+    }
+    .info-company-list {
+       p {
+           color: $colorBlack;
+       }
+    }
+}
+#news {
     .info-company-list {
         li {
             border-bottom: 1px dashed #aaaaaa;
@@ -17,12 +33,6 @@
         }
     }
     .info-history {
-        &-ttl {
-            @include responsive-font(get-vw-pc(20px),$min-font-pc, 20px);
-            @include respond-to($vertabwidth) {
-                @include responsive-font(get-vw-sp(20px),$min-font-sp, 20px);
-            }
-        }
         &-txt {
             @include responsive-font(get-vw-pc(16px),$min-font-pc, 16px);
             @include respond-to($vertabwidth) {
@@ -45,6 +55,58 @@
                 width: calc-percent(184,$innerwidth - 273);
                 @include respond-to($vertabwidth) {
                     width: auto;
+                }
+            }
+        }
+    }
+}
+#news {
+    &-detail {
+        .info-company-content {
+            p {
+                margin-bottom: calc-percent(30,$innerwidth);
+            }
+        }
+    }
+}
+.news {
+    @extend %tb-flex;
+    &-info {
+        width: calc-percent(870,$innerwidth);
+        margin-right: calc-percent(30,$innerwidth);
+    }
+    &-list {
+        width: calc-percent($innerwidth - 870 - 30 ,$innerwidth);
+        .ttl {
+            display: inline-block;
+            padding: 5px 25px;
+            background-color: $colorRed;
+            color: $colorWhite;
+            @extend %pos-relative;
+            &:after {
+                top: 100%;
+                left: 50%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                border-color: rgba(218, 37, 28, 0);
+                border-top-color: #da251c;
+                border-width: 5px;
+                margin-left: -5px;
+                @extend %pos-absolute;
+            }
+        }
+        ul {
+            margin-top: 16px;
+            li {
+                border-bottom: 1px solid #e6e6e6 ;
+                padding-bottom: 6px;
+                margin-bottom: 6px;
+                a {
+                    color: #666666;
                 }
             }
         }
