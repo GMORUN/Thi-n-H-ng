@@ -2,26 +2,41 @@
     background: url("../images/bg_timeline.jpg") repeat-y center top;
     width: 100%;
     padding-top: get-vw(1170,54);
+    @include respond-to(768) {
+        background: url("../images/bg_timeline.jpg") repeat-y left top;;
+    }
     &-wrap {
         width: 100%;
         display: flex;
         position: relative;
         margin-bottom: get-vw(1170,54);
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
     &-wrap1 {
         flex-direction: row-reverse;
-    }
-    &-left, &-right {
-        width: 50%;
+        @include respond-to(768) {
+            flex-direction: row;
+        }
     }
     &-left {
         margin: 0;
         padding-right: calc-percent(40,585) ;
+        @include respond-to(768) {
+            padding-right: 0;
+        }
         &-img {
             position: relative;
             margin-left: 0;
             width: 95%;
             margin-right: 0;
+            @include respond-to(768) {
+                margin-top: 12vw;
+            }
+            @include respond-to(640) {
+                margin-top: 14vw;
+            }
             img {
                 margin-right: 0;
             }
@@ -29,10 +44,16 @@
                 left: 100%;
                 @extend %arrow;
                 border-left: 18px solid $colorRed;
+                @include respond-to(768) {
+                    display: none;
+                }
             }
         }
         .timeline-year {
             text-align: right;
+            @include respond-to(768) {
+                text-align: left;
+            }
         }
     }
     &-right {
@@ -41,6 +62,12 @@
             position: relative;
             margin-left: 0;
             width: 95%;
+            @include respond-to(768) {
+                margin-top: 12vw;
+            }
+            @include respond-to(640) {
+                margin-top: 14vw;
+            }
             img {
                 margin-left: 0;
             }
@@ -48,7 +75,18 @@
                 right: 100%;
                 @extend %arrow;
                 border-right: 18px solid $colorRed;
+                @include respond-to(768) {
+                    display: none;
+                }
             }
+        }
+    }
+    &-left, &-right {
+        width: 50%;
+        @include respond-to(768) {
+            padding-left: calc-percent(35,730);
+            width: auto;
+            min-width: 40%;
         }
     }
     &-year {
@@ -56,7 +94,7 @@
         font-weight: bold;
         color: $colorRed;
         @include respond-to($vertabwidth) {
-            @include responsive-font(get-vw-sp(50px), 50px, 25px);
+            @include responsive-font(get-vw-sp(50px), 25px, 50px);
         }
     }
     &-point {
@@ -68,5 +106,13 @@
         @include respond-to(1100) {
             left: 49.3%;
         }
+        @include respond-to(768) {
+            left: -6px;
+            width: 12px;
+            top: 5vw;
+        }
+    }
+    &-bottom {
+        margin: 0 auto;
     }
 }
