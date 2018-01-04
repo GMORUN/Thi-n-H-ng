@@ -6,7 +6,8 @@
 @import "webfont";
 @import "slick";
 @import "main";
-//@import "header";
+@import "header";
+@import "header_top";
 @import "components/footer";
 @import "slider";
 @import "top_slider_pogo";
@@ -14,7 +15,7 @@
 //hienht
 @import "item/product_detail";
 @import "item/news";
-@import "components/header";
+//@import "components/header";
 @import "components/pagging";
 //myht
 @import "item/_video";
