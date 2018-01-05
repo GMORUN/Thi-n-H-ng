@@ -1141,7 +1141,7 @@
 .fa-search {
     padding: 0 15px;
 }
-.header-fix .fa-search:before {
+.header-fix .fa-search:before, .header-page .fa-search:before {
     color: $colorRed;
 }
 
