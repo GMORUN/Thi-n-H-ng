@@ -511,9 +511,9 @@
     &-fix, &-page {
         border-bottom: 5px solid #ed1c24;
         background: #fff;
-        @include respond-to(768) {
-            border-bottom: none;
-        }
+        //@include respond-to(768) {
+        //    border-bottom: none;
+        //}
     }
     //&-top {
     //    background: url(../images/bg_main.png) no-repeat top center;
@@ -1257,7 +1257,7 @@
     }
 }
 .header-menu .language {
-    display: none;
+    display: none ;
 }
 
 .header-fix {
@@ -1347,13 +1347,18 @@
     }
 }
 .mean-container .mean-nav ul li a.mean-expand {
-    height:35px !important;
-    margin-top: 0;
-    background: url("../images/arr_down.png") no-repeat center center !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+    background: url("../images/arr_down.png") no-repeat 90% center !important;
     text-indent: -99999px;
 }
 .mean-container .mean-nav ul li a.mean-clicked {
-    background: url("../images/arr_up.png") no-repeat center center !important;
+    display: flex;
+    align-items: flex-start;
+    background: url("../images/arr_up.png") no-repeat 90% 20px !important;
     text-indent: -99999px;
 }
 .mean-container .mean-nav ul {
