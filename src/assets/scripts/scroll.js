@@ -8,16 +8,16 @@ $(document).ready(function () {
     //     $('html, body').animate({scrollTop:0}, 1000);
     // });
 
-    $(document).scroll(function(e) {
-      var headerHeight = $('.header-language').height();
-      if($(window).scrollTop() > headerHeight) {
-            $('.header-language').hide();
-            $('.header ').addClass('header-fix')
-        } else {
-            $('.header-language').show();
-            $('.header ').removeClass('header-fix')
-        }
-    });
+    // $(document).scroll(function(e) {
+    //   var headerHeight = $('.header-language').height();
+    //   if($(window).scrollTop() > headerHeight) {
+    //         $('.header-language').hide();
+    //         $('.header ').addClass('header-fix')
+    //     } else {
+    //         $('.header-language').show();
+    //         $('.header ').removeClass('header-fix')
+    //     }
+    // });
     // var mySlider = $('.pogoSlider').pogoSlider({
     //     pauseOnHover: false
     // }).data('plugin_pogoSlider');

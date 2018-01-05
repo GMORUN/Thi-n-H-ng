@@ -45,4 +45,13 @@ $(document).ready(function () {
         var ele = $(this).attr('href');
         scrollTo(ele);
     })
+    $(document).scroll(function(e) {
+        var headerHeight = $('.header-language').height();
+        if($(window).scrollTop() > headerHeight) {
+            $('.header-language').hide();
+            $('.header ').addClass('header-fix')
+        } else {
+            $('.header-language').show();
+            $('.header ').removeClass('header-fix')
+        }});
 })

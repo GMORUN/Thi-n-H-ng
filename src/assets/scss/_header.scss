@@ -1109,7 +1109,7 @@
         }
     }
 }
-.header-fix .menu {
+.header-fix .menu, .header-page .menu {
     .item-menu {
         color: $colorRed;
     }
@@ -1308,10 +1308,11 @@
     color: $colorRed !important;
     position: absolute;
     z-index: 9999;
-    top: 20% !important;
-    &.meanclose {
-        top: 2%!important;
-    }
+    //top: 20% !important;
+    //&.meanclose {
+    //    top: 2%!important;
+    //}
+    top: 10px !important;
 }
 .mean-container .mean-nav {
     margin-top: 67px !important;
