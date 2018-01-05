@@ -508,12 +508,23 @@
             //height: 0;
         }
     }
+    &-page {
+        @media only screen and (min-width: 769px) {
+            position: relative !important;
+        }
+
+    }
     &-fix, &-page {
         border-bottom: 5px solid #ed1c24;
         background: #fff;
         //@include respond-to(768) {
         //    border-bottom: none;
         //}
+    }
+    &-fix {
+        @media only screen and (min-width: 769px) {
+            position: fixed !important;
+        }
     }
     //&-top {
     //    background: url(../images/bg_main.png) no-repeat top center;
