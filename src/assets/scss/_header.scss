@@ -299,7 +299,7 @@
         background: $colorWhite;
         border: 1px solid #da251c;
         @include respond-to($vertabwidth) {
-            border: 0;
+            border: 0 !important;
         }
         &:before {
             right: 72%;
@@ -313,6 +313,9 @@
          li {
             border-radius: 0;
             margin: 0;
+             @include respond-to($vertabwidth) {
+                 border-bottom: 0;
+             }
             &.active,
             &:hover {
                 a {
@@ -344,7 +347,7 @@
         width: 100% !important;
         top: 52px !important;
         @include respond-to($vertabwidth) {
-            position: inherit !important;
+            position: static !important;
             top:0 !important;
         }
         .product-list {
@@ -357,11 +360,17 @@
                 width: calc-percent(210,$innerwidth);
                 margin-right: calc-percent(30,$innerwidth) ;
                 border: 0;
+                @include respond-to($vertabwidth) {
+                    margin-right: 0 !important;
+                }
                 &:nth-of-type(5n+5) {
                     margin-right: 0 ;
                 }
                 &:nth-of-type(4n+4) {
                     margin-right: calc-percent(30,$innerwidth) ;
+                    @include respond-to($vertabwidth) {
+                        margin: 0 auto !important;
+                    }
                 }
                 &:hover,
                 &.active {
@@ -374,11 +383,25 @@
                 span {
                     @include responsive-font(get-vw-pc(16px),$min-font-pc, 16px);
                     @include respond-to($vertabwidth) {
+                        padding: 0;
+                        background: transparent;
+                        padding: 0;
+                        color: #000;
+                        text-align: left;
                         @include responsive-font(get-vw-sp(16px),$min-font-sp,16px);
+                        &:after {
+                            display: none;
+                        }
                     }
                 }
                 img {
                     border-radius: 0;
+                }
+            }
+            .product-list-info {
+                @include respond-to($vertabwidth) {
+                    padding: 0;
+                    margin: 0;
                 }
             }
         }
@@ -467,6 +490,7 @@
         z-index: 9;
         border-bottom: 5px solid #ed1c24;
         background: #fff;
+        height: 72px;
     }
 
     &-language {
@@ -481,6 +505,7 @@
         position: relative;
         @include respond-to(768) {
             position: static;
+            //height: 0;
         }
     }
     &-fix, &-page {
@@ -523,6 +548,9 @@
         align-items: center;
         justify-content: space-between;
         @extend %tb-flex;
+        @include respond-to($vertabwidth) {
+            height: 0;
+        }
     }
     .logo {
         @media only screen and (min-width: 769px) {
@@ -535,7 +563,8 @@
             position: absolute;
             width: 10%;
             left: 42%;
-            top: 0;
+            top: 4px;
+            z-index: 9999999999;
         }
         @include respond-to(640) {
             width: 15%;
@@ -561,9 +590,9 @@
         align-items: center;
         @extend %tb-flex;
         justify-content: flex-end;
-        //@include respond-to($vertabwidth) {
-        //    display: none;
-        //}
+        @include respond-to($vertabwidth) {
+            margin-right: 0;
+        }
         li {
             display: block;
             width: 40px;
@@ -1016,6 +1045,7 @@
                 position: static;
                 top: 0;
                 display: block;
+                width: 100%;
             }
         }
         &:hover,
@@ -1268,6 +1298,10 @@
 .mean-container .mean-bar {
     background: none !important;
     padding: 0;
+    @include respond-to(768) {
+        position: absolute;
+        width: 50%;
+    }
 }
 .meanmenu-reveal {
     left: 0 !important;
@@ -1280,7 +1314,7 @@
     }
 }
 .mean-container .mean-nav {
-    margin-top: 72px !important;
+    margin-top: 67px !important;
     background: #fff !important;
 }
 .mean-container a.meanmenu-reveal span {
@@ -1291,18 +1325,59 @@
         background: #fff !important;
         color: #000;
         li {
+            display: block;
             border: 0;
-            border-bottom: 1px solid #000;
+            border-bottom: 1px solid #d9d9d9;
             background: #fff;
             color: #000;
             border-radius: 0;
             a {
                 color: #000 !important;
+                text-transform: none !important;
+            }
+            &.active {
+                @include respond-to($vertabwidth) {
+                    background: $colorRed;
+                    a {
+                        color: $colorWhite !important;
+                    }
+                }
             }
         }
     }
 }
 .mean-container .mean-nav ul li a.mean-expand {
-    height:20px !important;
+    height:35px !important;
     margin-top: 0;
+    background: url("../images/arr_down.png") no-repeat center center !important;
+    text-indent: -99999px;
+}
+.mean-container .mean-nav ul li a.mean-clicked {
+    background: url("../images/arr_up.png") no-repeat center center !important;
+    text-indent: -99999px;
+}
+.mean-container .mean-nav ul {
+    li {
+        &.mean-last {
+            display: none;
+        }
+        li {
+            border-bottom: 0  !important;
+            a {
+                border-top: 0 !important;
+            }
+        }
+    }
+}
+.search-sp {
+    @include respond-to($vertabwidth) {
+        display: flex !important;
+        margin-top: calc-percent(10,$vertabwidth);
+        justify-content: flex-end;
+    }
+    .fa-search {
+        &:before {
+            color: #da251c !important;
+        }
+    }
 }

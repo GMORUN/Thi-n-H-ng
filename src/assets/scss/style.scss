@@ -6,7 +6,6 @@
 @import "webfont";
 @import "slick";
 @import "main";
-@import "header";
 @import "header_top";
 @import "components/footer";
 @import "slider";
@@ -15,7 +14,7 @@
 //hienht
 @import "item/product_detail";
 @import "item/news";
-//@import "components/header";
+@import "header";
 @import "components/pagging";
 //myht
 @import "item/_video";
