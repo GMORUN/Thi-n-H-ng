@@ -19,6 +19,7 @@
         }
         p {
             margin-bottom: 15px;
+            flex: 1;
         }
     }
     &-right {
@@ -152,6 +153,9 @@
             }
         }
         &-more {
+            margin-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e5e5e5;
             @extend %tb-flex;
             .img {
                 width: calc-percent(48,870);
@@ -186,8 +190,10 @@
                         width: 53px;
                         background-color: #9cb4d8;
                         text-align: center;
-                        color: $colorWhite;
-                        border-radius: 3px;
+                        border-radius: 2px;
+                        a {
+                            color: $colorWhite;
+                        }
                     }
                     ul {
                         align-items: center;
@@ -198,9 +204,34 @@
                             @extend %tb-flex;
                         }
                     }
+                    &-select {
+                        li {
+                            &:first-child {
+                                display: flex;
+                                align-items: center;
+                                margin-right: 17px;
+                            }
+                            img {
+                                &:first-child {
+                                    width: 16px;
+                                    margin-right: 4px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-plugin {
+            display: flex;
+            margin-top: 5px;
+            align-items: center;
+            span {
+                color: #3f5392;
+                &:first-child {
+                    margin-right: 6px;
                 }
             }
         }
     }
-
 }

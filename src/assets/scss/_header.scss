@@ -1398,3 +1398,23 @@
         }
     }
 }
+.header-page {
+    .header-language {
+        border-bottom: 0;
+    }
+    .logo {
+        @media only screen and (min-width: 769px) {
+            margin-top: -45px;
+        }
+    }
+    .header-language {
+        @media only screen and (min-width: 769px) {
+            margin-top: 13px;
+        }
+    }
+    .header-menu {
+        @media only screen and (min-width: 769px) {
+            margin: 5px auto 18px;
+        }
+    }
+}
