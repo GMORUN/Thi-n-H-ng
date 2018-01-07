@@ -1,16 +1,22 @@
 #product {
     .main {
         padding-top: 0;
+        @include respond-to($vertabwidth) {
+            padding-top: 3%;
+        }
     }
     .footer {
         margin-top: 0;
     }
-    .bread-crumb {
+    .banner .bread-crumb {
         display: inline-block;
         margin-top: calc-percent(60,$innerwidth);
         background-color: #747476;
         border-radius: 5px;
         padding: 5px 15px;
+        @media only screen and (min-width: 769px) and (max-width: 1170px) {
+            margin-top: 1%;
+        }
     }
     .main-ttl {
         color: $colorRed;
@@ -65,7 +71,10 @@
             padding: 15px 20px;
             border: 0;
             flex-wrap: wrap;
-            //flex-direction: column;
+            position: fixed;
+            top: 105px;
+            left: 0;
+            z-index: 3;
             @extend %tb-flex;
             li {
                 width: calc-percent(226,$innerwidth - 40);
