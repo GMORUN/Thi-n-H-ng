@@ -58,6 +58,21 @@
                 font-weight: 400;
             }
         }
+        &-scroll {
+            width: 100%;
+            top: 0;
+            bottom: auto;
+            padding: 15px 20px;
+            border: 0;
+            flex-wrap: wrap;
+            //flex-direction: column;
+            @extend %tb-flex;
+            li {
+                width: calc-percent(226,$innerwidth - 40);
+                margin-bottom: 1vw;
+            }
+        }
+
     }
 }
 .product {
