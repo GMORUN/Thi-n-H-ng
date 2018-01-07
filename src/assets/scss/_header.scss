@@ -1049,7 +1049,7 @@
         div {
             display: none;
             position: absolute;
-            top: 32px;
+            top: 33px;
             left: 0;
             width: 245px;
             @include respond-to($vertabwidth) {
@@ -1282,7 +1282,7 @@
         margin: 0;
     }
     .sub-menu-product {
-        top: 84px !important;
+        top: 83px !important;
     }
     .product-list {
         margin-top: 20px;
@@ -1416,5 +1416,8 @@
         @media only screen and (min-width: 769px) {
             margin: 5px auto 18px;
         }
+    }
+    .sub-menu-product {
+        top: 39px !important;
     }
 }
