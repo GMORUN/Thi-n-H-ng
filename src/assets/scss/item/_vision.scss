@@ -1,8 +1,8 @@
 .mission {
+    width: 100%;
   @extend %tb-flex;
   @extend %tb-flex-center;
   flex-wrap: wrap;
-  direction: row;
   background: url("../images/vision/bg_vission.jpg") no-repeat center bottom;
   background-size: 100% auto;
   padding: 50px 0 60px;
@@ -10,8 +10,9 @@
     padding-top: 3%;
     padding-bottom: calc-percent(50, 730);
   }
+
   &-text {
-    width: calc-percent(506, $innerwidth);
+    width: calc-percent(570, $innerwidth);
     @include responsive-font(get-vw-pc(18px), 14px, 18px);
     @include respond-to($vertabwidth) {
       width: 100%;
@@ -25,25 +26,33 @@
       }
     }
   }
-  img {
-    max-width: 323px;
+  .img {
+      width: calc-percent($innerwidth - 570, $innerwidth);
     @include respond-to($vertabwidth) {
       width: calc-percent(323,730);
     }
   }
 }
 .vision {
+    width: 100%;
   @extend %tb-flex;
   @extend %tb-flex-center;
   flex-wrap: wrap;
   flex-direction: row-reverse;
   @include respond-to($vertabwidth) {
     margin-top: 5%;
+      flex-direction: column;
   }
-  img {
-    max-width: 299px;
+  .img {
+      width: calc-percent(570, $innerwidth);
     @include respond-to($vertabwidth) {
       width: calc-percent(299,730);
     }
   }
+    .text {
+        width: calc-percent($innerwidth - 570, $innerwidth);
+        @include respond-to($vertabwidth) {
+            width: 100%;
+        }
+    }
 }
